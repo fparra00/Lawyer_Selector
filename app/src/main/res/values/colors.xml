@@ -9,11 +9,13 @@
     <color name="white">#FFFFFFFF</color>
     <!-- App Colors -->
     <color name="bgWhite">#fffefe</color>
+    <color name="bgLogin">#3e4250</color>
     <!-- Font Colors -->
     <color name="fontMain">#3b414f</color>
+    <color name="fontLoginSecondary">#525765</color>
+
     <!-- Button Colors -->
     <color name="btnMain">#f8af1d</color>
-
 
 
 </resources>

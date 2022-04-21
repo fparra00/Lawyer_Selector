@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AppPrincipal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgLogin"
+    android:orientation="vertical"
+    android:padding="50dp"
     tools:context=".LoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/lyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lyArrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/arrow"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/arrow_icon"
+                android:orientation="vertical"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="50dp">
+
+            <TextView
+                android:id="@+id/txtLogIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/foundry_context"
+                android:letterSpacing="0.02"
+                android:text="Log In"
+                android:textColor="@color/bgWhite"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyForm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="70dp">
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_normal"
+                android:drawableStart="@drawable/user_icon"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:textColorHint="@color/fontLoginSecondary"
+                android:hint="Username"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_normal"
+                android:textColorHint="@color/fontLoginSecondary"
+
+                android:drawableStart="@drawable/user_icon"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Password"
+                android:paddingTop="30dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
