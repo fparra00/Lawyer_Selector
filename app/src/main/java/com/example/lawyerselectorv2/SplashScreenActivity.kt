@@ -22,12 +22,13 @@ class SplashScreenActivity : AppCompatActivity() {
 
         txtLawyer.animation = anim2
         txtSelector.animation = anim2
+        pBar.animation = anim2
         imLogo.animation = anim
 
         Handler(Looper.getMainLooper()).postDelayed({
             val mainIntent = Intent(this, MainActivity::class.java)
             startActivity(mainIntent)
             finish()
-        }, 3000)
+        }, 3500)
     }
 }
