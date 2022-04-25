@@ -13,10 +13,11 @@
     <!-- Font Colors -->
     <color name="fontMain">#3b414f</color>
     <color name="fontLoginSecondary">#525765</color>
+    <color name="fontError">#DA2222</color>
 
     <!-- Button Colors -->
     <color name="btnMain">#f8af1d</color>
     <color name="btnSignIn">#20242d</color>
 
-
+    DA2222
 </resources>

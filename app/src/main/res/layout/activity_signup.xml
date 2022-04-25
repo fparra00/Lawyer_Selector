@@ -146,6 +146,7 @@
                 app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signinEmail"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:fontFamily="@font/foundry_context"
@@ -165,6 +166,7 @@
                 app:endIconMode="password_toggle">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/signinPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/foundry_context"
@@ -172,6 +174,17 @@
                     android:textSize="12dp"
                     app:counterEnabled="true"
                     app:counterMaxLength="20" />
+
+                <TextView
+                    android:id="@+id/txtError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/foundry_context"
+                        android:textColor="@color/btnMain"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_weight="1"
+                   />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 

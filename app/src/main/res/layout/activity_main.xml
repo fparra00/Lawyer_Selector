@@ -71,6 +71,7 @@
             android:background="@drawable/btn_main"
             android:fontFamily="@font/foundry_context"
             android:text="Log In"
+            
             android:textAllCaps="false"
             android:textColor="@color/bgWhite"
             android:textSize="20dp" />

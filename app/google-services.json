@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "888646003393",
+    "project_id": "lawyerselector",
+    "storage_bucket": "lawyerselector.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888646003393:android:71540a14db2e3f14bb0240",
+        "android_client_info": {
+          "package_name": "com.example.lawyerselectorv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888646003393-i9n5akhfv91v8pl8hmivfs4530o69n2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqbLp8n0BDhW5TAKNISUCfTK2flwDAVGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888646003393-i9n5akhfv91v8pl8hmivfs4530o69n2r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
