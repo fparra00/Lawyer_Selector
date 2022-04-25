@@ -16,6 +16,7 @@
 
     <!-- Button Colors -->
     <color name="btnMain">#f8af1d</color>
+    <color name="btnSignIn">#20242d</color>
 
 
 </resources>
