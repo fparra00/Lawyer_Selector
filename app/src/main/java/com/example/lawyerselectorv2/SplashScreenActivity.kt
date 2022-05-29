@@ -9,6 +9,8 @@ import android.os.Looper
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import androidx.appcompat.app.AlertDialog
 
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -17,6 +19,11 @@ class SplashScreenActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_splash_screen)
 
+        //Aux Functions
+        enableAnimator()
+    }
+
+    private fun enableAnimator(){
         var anim: Animation = AnimationUtils.loadAnimation(this, R.anim.desplaz_up)
         var anim2: Animation = AnimationUtils.loadAnimation(this, R.anim.desplaz_down)
 

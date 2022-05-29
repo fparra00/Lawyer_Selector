@@ -7,8 +7,9 @@
     android:layout_height="match_parent"
     android:background="@color/bgLogin"
     android:orientation="vertical"
-    android:padding="50dp"
+    android:padding="40dp"
     tools:context=".LoginActivity">
+
 
     <LinearLayout
         android:id="@+id/lyContainer"
@@ -17,97 +18,146 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/lyArrow"
+            android:id="@+id/lyUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/arrow"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:background="@drawable/arrow_icon"
-                android:orientation="vertical"></LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lyText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="50dp">
-
-            <TextView
-                android:id="@+id/txtLogIn"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/foundry_context"
-                android:letterSpacing="0.02"
-                android:text="New \nAccount"
-                android:textColor="@color/bgWhite"
-                android:textSize="30dp" />
-
-            <LinearLayout
+                android:id="@+id/lyIcons1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/lyArrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/arrow"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/arrow_icon"
+                        android:orientation="vertical"></LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center|fill_horizontal|center_vertical"
-                    android:paddingLeft="70dp">
+                    android:layout_weight="1"
+                    android:fontFamily="@font/foundry_context"
+                    android:text="Create Your Profile"
+                    android:textColor="@color/bgWhite"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyBars"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/bar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/txt"
-                        android:fontFamily="@font/foundry_context"
-                        android:textColor="@color/bgWhite"
-
-                        android:layout_width="wrap_content"
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="1"
-                        android:textSize="25dp" />
-
-                    <TextView
-                        android:id="@+id/txt3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:layout_gravity="center_vertical"
                         android:fontFamily="@font/foundry_context"
-                        android:gravity="center|clip_vertical|center_vertical|fill_vertical"
-                        android:text=" / 2"
-                        android:textColor="@color/bgWhite" />
+                        android:gravity="center_horizontal"
+                        android:text="Email/Password"
+                        android:textColor="@color/btnMain"
+                        android:textSize="12dp" />
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/btn_main"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/bar2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="clip_horizontal|center|center_horizontal|fill_horizontal"
-                    android:orientation="horizontal"
-                    android:paddingLeft="60dp">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginRight="2.5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:fontFamily="@font/foundry_context"
-                        android:gravity="right|top"
-                        android:text="STEPS"
-                        android:textColor="@color/bgWhite"
-                        android:textSize="10dp" />
+                        android:gravity="center_horizontal"
+                        android:text="Personal Details"
+                        android:textColor="@color/fontGrey"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/btn_grey_form"
+                        android:orientation="horizontal"></LinearLayout>
                 </LinearLayout>
 
-            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/bar3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/foundry_context"
+                        android:gravity="center_horizontal"
+                        android:text="Take a Photo"
+                        android:textColor="@color/fontGrey"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/btn_grey_form"
+                        android:orientation="horizontal"></LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lyPhoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal"
             android:paddingTop="40dp">
 
@@ -133,6 +183,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lyForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -143,7 +194,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="EMAIL"
-                app:endIconMode="clear_text">
+                app:boxStrokeColor="@color/bgWhite"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/bgWhite">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/signinEmail"
@@ -161,9 +214,10 @@
                 android:hint="PASSWORD"
                 android:paddingTop="10dp"
                 app:counterEnabled="true"
-
                 app:counterMaxLength="20"
-                app:endIconMode="password_toggle">
+
+                app:endIconMode="password_toggle"
+                app:hintTextColor="@color/bgWhite">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/signinPassword"
@@ -179,23 +233,33 @@
                     android:id="@+id/txtError"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="10dp"
-                    android:fontFamily="@font/foundry_context"
-                        android:textColor="@color/btnMain"
                     android:layout_gravity="center|center_vertical"
                     android:layout_weight="1"
-                   />
+                    android:fontFamily="@font/foundry_context"
+                    android:textColor="@color/btnMain"
+                    android:textSize="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/cbLawyer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/foundry_context"
+
+                android:text="
+You want to join to our lawyers"
+                android:textSize="13dp" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lyButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="70dp"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btnSignIn"
+                android:id="@+id/btnSignIn2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
@@ -221,20 +285,20 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/foundry_context"
                     android:gravity="right"
-                    android:textSize="10dp"
-                    android:text="First time here?" />
+                    android:text="First time here?"
+                    android:textSize="10dp" />
 
                 <TextView
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="10dp"
                     android:layout_gravity="center_horizontal"
-                    android:fontFamily="@font/foundry_context"
                     android:layout_weight="1"
+                    android:fontFamily="@font/foundry_context"
                     android:gravity="left"
+                    android:text="   Sign up."
                     android:textColor="@color/btnMain"
-                    android:text="   Sign up." />
+                    android:textSize="10dp" />
             </LinearLayout>
 
 

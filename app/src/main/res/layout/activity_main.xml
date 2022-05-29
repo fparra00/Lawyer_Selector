@@ -61,20 +61,50 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="30dp"
-        android:paddingTop="200dp"
+        android:paddingTop="130dp"
         android:paddingRight="30dp">
 
         <Button
             android:id="@+id/btnLogIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/btn_main"
             android:fontFamily="@font/foundry_context"
+
             android:text="Log In"
-            
             android:textAllCaps="false"
             android:textColor="@color/bgWhite"
             android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:fontFamily="@font/foundry_context"
+            android:gravity="center"
+
+            android:text="or"
+            android:textColor="@color/fontMain"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/btnLogInGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/btn_signin_google"
+            android:drawableStart="@drawable/google_icon"
+            android:fontFamily="@font/foundry_context"
+            android:paddingLeft="10dp"
+            android:text="Log In With Google"
+            android:textAllCaps="false"
+            android:textColor="@color/fontMain"
+            android:textSize="10dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -96,13 +126,13 @@
             android:textSize="10dp" />
 
         <TextView
-            android:id="@+id/txt2"
+            android:id="@+id/txtSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/foundry_context"
             android:text="  Sign up Here."
-            android:textColor="@color/fontMain"
+            android:textColor="@color/btnMain"
 
             android:textSize="10dp" />
     </LinearLayout>
