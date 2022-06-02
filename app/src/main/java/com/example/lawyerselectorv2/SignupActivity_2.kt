@@ -7,7 +7,6 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lawyerselectorv2.classes.User
 import com.google.firebase.firestore.ktx.firestore
@@ -31,8 +30,6 @@ class SignupActivity_2 : AppCompatActivity() {
         getPrefs = getSharedPreferences("prefsFile", Context.MODE_PRIVATE)
         emailPref = getPrefs.getString("email", "null").toString()
         userType = getPrefs.getString("userType", "null").toString()
-
-        Toast.makeText(this, emailPref, Toast.LENGTH_LONG).show()
 
         //.... onClicks ....
         btnSignIn2.setOnClickListener {
@@ -69,7 +66,8 @@ class SignupActivity_2 : AppCompatActivity() {
                 "country" to autocomcity.text.toString(),
                 "city" to txtCity.text.toString(),
                 "postal code" to txtPostal.text.toString(),
-                "adress" to txtDirecion1.text.toString()
+                "adress" to txtDirecion1.text.toString(),
+                "email" to emailPref
             )
         ).addOnSuccessListener {
             goToTakeAPhotoAct()
@@ -79,8 +77,6 @@ class SignupActivity_2 : AppCompatActivity() {
     }
 
     private fun createLawyer() {
-        //instanciamos una clase de user, y la vamos pasando por intents, y asi pillamos sus
-        //personales
         personalDatesLawyer = User(
             generateId(),
             txtName.text.toString(),
@@ -90,6 +86,7 @@ class SignupActivity_2 : AppCompatActivity() {
             txtPostal.text.toString(),
             txtDirecion1.text.toString()
         )
+        goToLawyerActivity()
     }
 
     //Function to generate a random ID
@@ -102,11 +99,16 @@ class SignupActivity_2 : AppCompatActivity() {
         return id
     }
 
+    //.... goTo ....
     private fun goToTakeAPhotoAct() {
         val intent = Intent(this, TakeASelfieActivity::class.java)
         startActivity(intent)
     }
-
+    private fun goToLawyerActivity() {
+        val intent = Intent(this, LawyerDetailsActivity::class.java)
+        intent.putExtra("personalDatesLawyer", personalDatesLawyer)
+        startActivity(intent)
+    }
 
 }
 

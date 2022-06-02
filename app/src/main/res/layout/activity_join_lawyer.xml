@@ -110,6 +110,7 @@ You accept our conditions and terms of service"
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/btnNext"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="clip_vertical|fill_vertical|end"

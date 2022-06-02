@@ -23,14 +23,22 @@
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/drawable/progress_bar_splash_screen.xml" value="0.2465" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/font/fonts.xml" value="0.396875" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_join_lawyer.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_lawyer_details.xml" value="0.33" />
+        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_lawyer_details2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_lawyer_user.xml" value="0.358695652173913" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_principal_menu.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_principal_menu.xml" value="0.22" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_signup.xml" value="0.29250457038391225" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_signup2.xml" value="0.33" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_splash_screen.xml" value="0.358695652173913" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_take_aselfie.xml" value="0.33" />
+        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/dsadsa.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/lawyer_item_list.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/lawyer_list_item.xml" value="0.33" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/list_item.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/list_item_lawyer.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/list_lawyer_item.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.36666666666666664" />
       </map>
     </option>

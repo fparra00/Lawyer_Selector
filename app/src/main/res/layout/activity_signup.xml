@@ -12,7 +12,7 @@
 
 
     <LinearLayout
-        android:id="@+id/lyContainer"
+        android:id="@+id/lyApp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -45,7 +45,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/lyText"
+                android:id="@+id/lyPersDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -249,6 +249,7 @@
                 android:text="
 You want to join to our lawyers"
                 android:textSize="13dp" />
+
         </LinearLayout>
 
         <LinearLayout

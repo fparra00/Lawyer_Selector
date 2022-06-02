@@ -8,9 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- App Colors -->
+    <!-- Background Colors -->
     <color name="bgWhite">#fffefe</color>
     <color name="bgLogin">#3e4250</color>
+    <color name="bgGrey">#DEDEDE</color>
+
+    <!-- Background Colors -->
 
     <!-- Font Colors -->
     <color name="fontMain">#3b414f</color>
@@ -25,6 +28,8 @@
     <color name="btnMain">#f8af1d</color>
     <color name="btnSignIn">#20242d</color>
 
+    <!-- Override Colors  -->
+    <color name="mtrl_textinput_default_box_stroke_color" override="true">#fffefe</color>
 
 
 </resources>

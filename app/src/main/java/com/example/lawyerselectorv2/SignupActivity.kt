@@ -6,7 +6,6 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -57,7 +56,7 @@ class SignupActivity : AppCompatActivity() {
                         // Sign in success, update UI with the signed-in user's information
                         val user = auth.currentUser
                         saveSharedPreferences(user?.email.toString())
-                        if(cbLawyer.isChecked){
+                        if (cbLawyer.isChecked) {
                             showDialog()
                         } else {
                             goToSignUp2()
@@ -71,7 +70,7 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-    private fun showDialog(){
+    private fun showDialog() {
         AlertDialog.Builder(this, R.style.CustomDialogTheme)
             .setTitle("Are you a Lawyer?")
             .setMessage("Do you want to join to our team of lawyers?")
@@ -125,7 +124,6 @@ class SignupActivity : AppCompatActivity() {
         getWindow().getDecorView().clearFocus();
     }
 
-
     //Process to Pick the Photo
     private fun pickImageGallery() {
         val intent = Intent(Intent.ACTION_PICK)
@@ -141,15 +139,6 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-    private fun goToSignUp2() {
-        val intent = Intent(this, SignupActivity_2::class.java)
-        startActivity(intent)
-    }
-
-    private fun goToJoinLawyer() {
-        val intent = Intent(this, JoinLawyerActivity::class.java)
-        startActivity(intent)
-    }
 
     //Process to save the email in shared preferences
     fun saveSharedPreferences(em: String) {
@@ -163,6 +152,18 @@ class SignupActivity : AppCompatActivity() {
         prefs!!.putString("email", em)
         prefs.apply()
     }
+
+    //.... goTo ....
+    private fun goToSignUp2() {
+        val intent = Intent(this, SignupActivity_2::class.java)
+        startActivity(intent)
+    }
+
+    private fun goToJoinLawyer() {
+        val intent = Intent(this, JoinLawyerActivity::class.java)
+        startActivity(intent)
+    }
+
 
 
 }

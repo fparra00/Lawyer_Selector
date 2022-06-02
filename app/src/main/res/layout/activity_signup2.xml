@@ -46,7 +46,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/lyText"
+                android:id="@+id/lyPersDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -155,7 +155,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lyDown"
+            android:id="@+id/lyMid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -175,6 +175,8 @@
                     android:layout_weight="1"
                     android:hint="COMPLETE NAME"
                     app:startIconDrawable="@drawable/user"
+                    app:backgroundTint="@null"
+
                     app:boxStrokeColor="@color/bgWhite"
                     app:endIconMode="clear_text"
                     app:hintTextColor="@color/bgWhite">
@@ -183,6 +185,8 @@
                         android:id="@+id/txtName"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
+                        app:backgroundTint="@null"
+
                         android:layout_weight="1"
                         android:fontFamily="@font/foundry_context"
                         android:textSize="12dp" />

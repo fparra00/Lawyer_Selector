@@ -15,7 +15,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/lyContainer"
+        android:id="@+id/lyApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/bgWhite"
@@ -37,7 +37,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/lyText"
+        android:id="@+id/lyPersDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"

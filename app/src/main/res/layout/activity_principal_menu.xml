@@ -2,24 +2,48 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/lyContainer"
+    android:id="@+id/lyApp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/fontMain"
+
     tools:context=".PrincipalMenuActivity">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:id="@+id/lawyerRecycler"
+        android:layout_height="match_parent"
+       >
+    </androidx.recyclerview.widget.RecyclerView>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
-            android:layout_width="match_parent"
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/white"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        app:fabAlignmentMode="end"
+        app:menu="@menu/bottom_navigation_menu"
+        />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:menu="@menu/bottom_navigation_menu" />
+            app:layout_anchor="@id/bottomAppBar"
+            app:srcCompat="@drawable/search_icon"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>
