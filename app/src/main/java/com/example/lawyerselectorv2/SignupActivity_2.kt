@@ -32,7 +32,7 @@ class SignupActivity_2 : AppCompatActivity() {
         userType = getPrefs.getString("userType", "null").toString()
 
         //.... onClicks ....
-        btnSignIn2.setOnClickListener {
+        btnCreateLawyer2.setOnClickListener {
             //Debemos de Comprobar Formulario Antes
             if (userType.equals("user")) createUser()
             if (userType.equals("lawyer")) createLawyer()
@@ -47,7 +47,7 @@ class SignupActivity_2 : AppCompatActivity() {
         //Dropdown Items Prefix Tlf
         val items = listOf("+34", "+42", "+57", "+76", "+21", "+26", "+06")
         val adapter = ArrayAdapter<String>(this, R.layout.list_item, items)
-        autocom.setAdapter(adapter)
+        autocomGender.setAdapter(adapter)
         //Dropdown Items Prefix Country
         val items_count = listOf("Spain", "France", "Germany", "United States", "England")
         val adapter_count = ArrayAdapter<String>(this, R.layout.list_item, items_count)
@@ -62,7 +62,7 @@ class SignupActivity_2 : AppCompatActivity() {
             mapOf(
                 "id" to generateId(),
                 "name" to txtName.text.toString(),
-                "telephone" to (autocom.text.toString() + " " + txtTlf.text),
+                "telephone" to (autocomGender.text.toString() + " " + txtTlf.text),
                 "country" to autocomcity.text.toString(),
                 "city" to txtCity.text.toString(),
                 "postal code" to txtPostal.text.toString(),
@@ -80,7 +80,7 @@ class SignupActivity_2 : AppCompatActivity() {
         personalDatesLawyer = User(
             generateId(),
             txtName.text.toString(),
-            autocom.text.toString() + " " + txtTlf.text,
+            autocomGender.text.toString() + " " + txtTlf.text,
             autocomcity.text.toString(),
             txtCity.text.toString(),
             txtPostal.text.toString(),

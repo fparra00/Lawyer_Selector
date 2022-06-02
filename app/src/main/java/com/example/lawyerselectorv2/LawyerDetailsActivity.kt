@@ -2,21 +2,19 @@ package com.example.lawyerselectorv2
 
 import android.content.ContentValues
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
 import com.example.lawyerselectorv2.classes.User
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_lawyer_details.*
-import kotlinx.android.synthetic.main.activity_lawyer_details.autocom
-import kotlinx.android.synthetic.main.activity_lawyer_details.btnSignIn2
-import kotlinx.android.synthetic.main.activity_signup2.*
+import kotlinx.android.synthetic.main.activity_lawyer_details.autocomGender
+import kotlinx.android.synthetic.main.activity_lawyer_details.btnCreateLawyer2
 import java.text.SimpleDateFormat
 import kotlin.random.Random
 
@@ -32,22 +30,20 @@ class LawyerDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lawyer_details)
-
-        auxParameters()
-
         //Init Shared Preferences
         getPrefs = getSharedPreferences("prefsFile", Context.MODE_PRIVATE)
         emailPref = getPrefs.getString("email", "null").toString()
-
         //Save the personal dates of the lawyer with the intent
         if (getIntent().getSerializableExtra("personalDatesLawyer") != null) personalDatesLawyer =
             getIntent().getSerializableExtra("personalDatesLawyer") as User
+        //Aux Functions
+        auxParameters()
 
         //.... onClicks ....
-        btnSignIn2.setOnClickListener {
+        btnCreateLawyer2.setOnClickListener {
             createLawyer()
         }
-        txtCalendar_2.setOnClickListener {
+        txtDescription_2.setOnClickListener {
             showCalendar()
         }
         txtBirthday_2.setOnClickListener {
@@ -79,7 +75,7 @@ class LawyerDetailsActivity : AppCompatActivity() {
                 "birthDate" to birthDate
             )
         ).addOnSuccessListener {
-            //Que hacer cuando se agregue a la bd
+            goToLawyersDetail2()
         }.addOnFailureListener { e ->
             Log.w(ContentValues.TAG, "Error adding document", e)
         }
@@ -103,7 +99,7 @@ class LawyerDetailsActivity : AppCompatActivity() {
             dateFin =
                 simpleFormat.format(it.first).toString() + " - " + simpleFormat.format(it.second)
                     .toString()
-            txtCalendar_2.setText(dateFin)
+            txtDescription_2.setText(dateFin)
         }
     }
 
@@ -124,10 +120,10 @@ class LawyerDetailsActivity : AppCompatActivity() {
     }
 
     private fun auxParameters(){
-        txtCalendar_2.setEnabled(true);
-        txtCalendar_2.setTextIsSelectable(true);
-        txtCalendar_2.setFocusable(false);
-        txtCalendar_2.setFocusableInTouchMode(false);
+        txtDescription_2.setEnabled(true);
+        txtDescription_2.setTextIsSelectable(true);
+        txtDescription_2.setFocusable(false);
+        txtDescription_2.setFocusableInTouchMode(false);
 
         txtBirthday_2.setEnabled(true);
         txtBirthday_2.setTextIsSelectable(true);
@@ -142,6 +138,12 @@ class LawyerDetailsActivity : AppCompatActivity() {
             "Madrid Law School"
         )
         val adapter = ArrayAdapter<String>(this, R.layout.list_item, items)
-        autocom.setAdapter(adapter)
+        autocomGender.setAdapter(adapter)
+    }
+
+    //.... goTo ....
+    private fun goToLawyersDetail2() {
+        val intent = Intent(this, LawyerDetailsActivity_2::class.java)
+        startActivity(intent)
     }
 }

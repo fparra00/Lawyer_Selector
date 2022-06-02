@@ -46,7 +46,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/lyPersDate"
+                android:id="@+id/lyTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -221,7 +221,7 @@
                         app:hintTextColor="@color/bgWhite">
 
                         <AutoCompleteTextView
-                            android:id="@+id/autocom"
+                            android:id="@+id/autocomGender"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -455,7 +455,7 @@ You accept our conditions and terms of service"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btnSignIn2"
+                android:id="@+id/btnCreateLawyer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"

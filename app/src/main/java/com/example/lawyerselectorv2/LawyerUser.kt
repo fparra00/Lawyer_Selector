@@ -12,16 +12,15 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_lawyer_user.*
 
 class LawyerUser : AppCompatActivity() {
+
     //Aux Vars
     private lateinit var lyKnowledgeAnim: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lawyer_user)
-
         //Initialize Vars
         lyKnowledgeAnim = lyKnowledge
-
         //..onClicks..
         lyOnKnowledge.setOnClickListener {
             showLy(lyKnowledgeAnim, lyOnKnowledge, lawName4)

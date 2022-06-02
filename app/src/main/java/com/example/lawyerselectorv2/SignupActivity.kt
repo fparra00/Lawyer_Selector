@@ -30,7 +30,7 @@ class SignupActivity : AppCompatActivity() {
         btnPhoto.setOnClickListener {
             pickImageGallery()
         }
-        btnSignIn2.setOnClickListener {
+        btnCreateLawyer2.setOnClickListener {
             createUser()
         }
 

@@ -17,7 +17,9 @@ class TakeASelfieActivity : AppCompatActivity() {
     }
 
 
-    //Function to show a Dialog if the user cancel the picture
+    /**
+     * Show a Dialog if the user cancel the picture
+     */
     private fun showDialog() {
         android.app.AlertDialog.Builder(this, R.style.CustomDialogTheme)
             .setTitle("You don't take a Picture?")

@@ -1,9 +1,791 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lyApp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgLogin"
+    android:orientation="vertical"
     tools:context=".LawyerDetailsActivity_2">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false">
+
+        <LinearLayout
+            android:id="@+id/appPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lyUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lyIcons1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lyArrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/arrow"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/arrow_icon"
+                            android:orientation="vertical"></LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableEnd="@drawable/law_icon"
+                        android:fontFamily="@font/foundry_context"
+                        android:gravity="center_vertical"
+                        android:text="Congratulations, your profile has been verified!"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="So that we can validate your profile, fill in at least the necessary fields. Remember that the more quality information you provide, the greater the chances you have of finding new students."
+                        android:textColor="@color/bgWhite"
+                        android:textSize="12dp" />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/materialDivider7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyIdiom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="IDIOM"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="WHAT LANGUAGES DO YOU SPEAK?"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="Tell your clients your native language and the level of the other languages ​​you master. Check the box below if you can teach the subjects in these languages."
+                        android:textColor="@color/bgWhite"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:id="@+id/lySelection"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/rgSelection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkedButton="@+id/rge1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView21"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/foundry_context"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="ENGLISH"
+                                android:textColor="@color/bgWhite"
+                                android:textSize="12dp" />
+
+                            <RadioButton
+                                android:id="@+id/rge1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <RadioButton
+                                android:id="@+id/rge2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <RadioButton
+                                android:id="@+id/rge3"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lySpanish"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/rgSpanish"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkedButton="@+id/rge1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView21"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/foundry_context"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="SPANISH"
+                                android:textColor="@color/bgWhite"
+                                android:textSize="12dp" />
+
+                            <RadioButton
+                                android:id="@+id/rgs1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <RadioButton
+                                android:id="@+id/rgs2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <RadioButton
+                                android:id="@+id/rgs3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyFrench"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/rgFrench"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checkedButton="@+id/rge1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView21"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/foundry_context"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="FRENCH"
+                                android:textColor="@color/bgWhite"
+                                android:textSize="12dp" />
+
+                            <RadioButton
+                                android:id="@+id/rgf1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <RadioButton
+                                android:id="@+id/rgf2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <RadioButton
+                                android:id="@+id/rgf3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="(Basic Level, Intermediate Level, or Native)"
+                        android:textColor="@color/fontGrey"
+                        android:textSize="12dp" />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/materialDivider7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="GENDER"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="What gender do you identify with?"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="12dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/prefix"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/foundry_context"
+                        android:hint="GENDER"
+                        android:textCursorDrawable="@color/bgWhite"
+                        android:textSize="12dp"
+                        android:theme="@style/Theme.MaterialComponents"
+                        app:boxStrokeColor="@color/bgWhite"
+                        app:expandedHintEnabled="true"
+                        app:hintTextColor="@color/bgWhite">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autocomGender"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/foundry_context"
+                            android:inputType="none"
+                            android:paddingLeft="10dp"
+                            android:textCursorDrawable="@color/bgWhite"
+                            android:textSize="12dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/materialDivider8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyStudies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="TRAINING AND EXPERIENCE"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="Studies and certifications"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:id="@+id/lyStudie1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="gone">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/prefix"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/foundry_context"
+                            android:hint="DEGREE"
+                            android:textCursorDrawable="@color/bgWhite"
+                            android:textSize="12dp"
+                            android:theme="@style/Theme.MaterialComponents"
+                            app:boxStrokeColor="@color/bgWhite"
+                            app:expandedHintEnabled="true"
+                            app:hintTextColor="@color/bgWhite">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/autocomDegree"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/foundry_context"
+                                android:inputType="none"
+                                android:paddingLeft="10dp"
+                                android:textCursorDrawable="@color/bgWhite"
+                                android:textSize="12dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/foundry_context"
+                            android:text="Finalized" />
+
+                        <LinearLayout
+                            android:id="@+id/lys1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Studie or Certificate
+"
+                                android:outlineAmbientShadowColor="@color/bgWhite"
+                                android:outlineSpotShadowColor="@color/bgWhite"
+                                android:textColorHint="@color/bgWhite"
+                                app:boxStrokeColor="@color/bgWhite"
+                                app:boxStrokeWidth="1dp"
+                                app:counterOverflowTextColor="@color/bgWhite"
+                                app:helperTextTextColor="@color/fontGrey"
+                                app:hintTextColor="@color/bgWhite">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/txtCarreer1"
+
+                                    android:cursorVisible="false"
+                                    android:textSize="12dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/materialDivider9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyStudie2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/prefix"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/foundry_context"
+                            android:hint="DEGREE"
+                            android:textCursorDrawable="@color/bgWhite"
+                            android:textSize="12dp"
+                            android:theme="@style/Theme.MaterialComponents"
+                            app:boxStrokeColor="@color/bgWhite"
+                            app:expandedHintEnabled="true"
+                            app:hintTextColor="@color/bgWhite">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/autocomDegree2"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/foundry_context"
+                                android:inputType="none"
+                                android:paddingLeft="10dp"
+                                android:textCursorDrawable="@color/bgWhite"
+                                android:textSize="12dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/foundry_context"
+                            android:text="Finalized" />
+
+                        <LinearLayout
+                            android:id="@+id/lys1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Studie or Certificate
+"
+                                android:outlineAmbientShadowColor="@color/bgWhite"
+                                android:outlineSpotShadowColor="@color/bgWhite"
+                                android:textColorHint="@color/bgWhite"
+                                app:boxStrokeColor="@color/bgWhite"
+                                app:boxStrokeWidth="1dp"
+                                app:counterOverflowTextColor="@color/bgWhite"
+                                app:helperTextTextColor="@color/fontGrey"
+                                app:hintTextColor="@color/bgWhite">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/txtCarreer2"
+
+                                    android:cursorVisible="false"
+                                    android:textSize="12dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:id="@+id/materialDivider9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyStudie3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/prefix"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/foundry_context"
+                            android:hint="DEGREE"
+                            android:textCursorDrawable="@color/bgWhite"
+                            android:textSize="12dp"
+                            android:theme="@style/Theme.MaterialComponents"
+                            app:boxStrokeColor="@color/bgWhite"
+                            app:expandedHintEnabled="true"
+                            app:hintTextColor="@color/bgWhite">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/autocomDegree3"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/foundry_context"
+                                android:inputType="none"
+                                android:paddingLeft="10dp"
+                                android:textCursorDrawable="@color/bgWhite"
+                                android:textSize="12dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/foundry_context"
+                            android:text="Finalized" />
+
+                        <LinearLayout
+                            android:id="@+id/lys1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Studie or Certificate
+"
+                                android:outlineAmbientShadowColor="@color/bgWhite"
+                                android:outlineSpotShadowColor="@color/bgWhite"
+                                android:textColorHint="@color/bgWhite"
+                                app:boxStrokeColor="@color/bgWhite"
+                                app:boxStrokeWidth="1dp"
+                                app:counterOverflowTextColor="@color/bgWhite"
+                                app:helperTextTextColor="@color/fontGrey"
+                                app:hintTextColor="@color/bgWhite">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/txtCarreer3"
+
+                                    android:cursorVisible="false"
+                                    android:textSize="12dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/btnAddStudies"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/add_circle_icon"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/foundry_context"
+                            android:gravity="center_vertical|fill_vertical"
+                            android:text="Add More Studies"
+                            android:textColor="@color/bgWhite"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/materialDivider10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="DESCRIPTION"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/foundry_context"
+                        android:text=" How are you going to present yourself to your clients?"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:id="@+id/lys1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView29"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/foundry_context"
+                            android:text="Description (min 50 charachters)"
+                            android:textColor="@color/bgWhite"
+                            android:textSize="12dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtDescription"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="auto"
+                            android:outlineAmbientShadowColor="@color/bgWhite"
+                            android:outlineSpotShadowColor="@color/bgWhite"
+
+                            android:textColorHint="@color/bgWhite"
+                            app:boxStrokeColor="@color/bgWhite"
+                            app:boxStrokeWidth="1dp"
+                            app:counterOverflowTextColor="@color/bgWhite"
+                            app:helperText="
+We want customers to read you"
+                            app:helperTextEnabled="true"
+                            app:helperTextTextColor="@color/fontGrey"
+                            app:hintTextColor="@color/bgWhite">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtDescription_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginRight="4dp"
+                                android:cursorVisible="false"
+                                android:focusable="auto"
+                                android:textSize="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnCreateLawyer2"
+                        style="@style/Theme.AppCompat.NoActionBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/btn_signin_normal"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="Next"
+                        android:textAllCaps="false"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="15dp"
+                        android:theme="@style/Theme.AppCompat.NoActionBar"
+                        app:backgroundTint="@null" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
