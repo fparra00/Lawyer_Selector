@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     android:background="@color/bgLogin"
     android:orientation="vertical"
-    android:padding="40dp"
+    android:paddingLeft="40dp"
+    android:paddingTop="20dp"
+    android:paddingRight="40dp"
     tools:context=".LoginActivity">
 
 
@@ -157,7 +159,7 @@
             android:id="@+id/lyPhoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal"
             android:paddingTop="40dp">
 
@@ -187,7 +189,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingTop="15dp">
+            android:paddingTop="10dp">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textField"
@@ -254,54 +256,34 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:checkedButton="@+id/rge1"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/foundry_context"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="IM A USER"
-                        android:textColor="@color/bgWhite"
-                        android:textSize="12dp" />
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <RadioButton
                         android:id="@+id/joinUser"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:fontFamily="@font/foundry_context"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:text="IM A LAWYER"
-                        android:textColor="@color/bgWhite"
+                        android:text="Join like a User"
                         android:textSize="12dp" />
 
                     <RadioButton
                         android:id="@+id/joinLawyer"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1" />
-
-
+                        android:layout_weight="1"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="Join like a Lawyer"
+                        android:textSize="12dp" />
                 </RadioGroup>
-
             </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/lyButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="50dp"
             android:orientation="vertical">
 
             <Button
@@ -331,7 +313,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/foundry_context"
                     android:gravity="right"
-                    android:text="First time here?"
+                    android:text="It's not your first time here?"
                     android:textSize="10dp" />
 
                 <TextView

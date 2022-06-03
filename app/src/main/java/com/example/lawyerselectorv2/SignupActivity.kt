@@ -1,8 +1,6 @@
 package com.example.lawyerselectorv2
 
-import android.app.AlertDialog
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -44,7 +42,9 @@ class SignupActivity : AppCompatActivity() {
         val currentUser = auth.currentUser
     }
 
-    //Process to Create a User with a Email and a Password
+    /**
+     * Create user with email and password with Firebase autentication
+     */
     private fun createUser() {
         if (checkForm()) {
             auth.createUserWithEmailAndPassword(
@@ -56,13 +56,12 @@ class SignupActivity : AppCompatActivity() {
                         // Sign in success, update UI with the signed-in user's information
                         val user = auth.currentUser
                         saveSharedPreferences(user?.email.toString())
-                        if (cbLawyer.isChecked) {
-                            showDialog()
+                        if (joinLawyer.isChecked) {
+                            goToJoinLawyer()
                         } else {
                             goToSignUp2()
                         }
                     } else {
-                        // If sign in fails, display a message to the user.
                         txtError.setText(task.exception!!.message)
                         clearForm()
                     }
@@ -70,22 +69,10 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-    private fun showDialog() {
-        AlertDialog.Builder(this, R.style.CustomDialogTheme)
-            .setTitle("Are you a Lawyer?")
-            .setMessage("Do you want to join to our team of lawyers?")
-            .setPositiveButton("Yes",
-                DialogInterface.OnClickListener { dialog, which ->
-                    goToJoinLawyer()
-                })
-            .setNegativeButton("No",
-                DialogInterface.OnClickListener { dialog, which ->
-                    goToSignUp2()
-                })
-            .show()
-    }
 
-    //Process to Check if the Form is Correctly Formatted
+    /**
+     * Check if the form is corrrectly formated
+     */
     private fun checkForm(): Boolean {
         if (signinEmail.text.toString().isNullOrBlank()) {
             showError(1)
@@ -124,7 +111,9 @@ class SignupActivity : AppCompatActivity() {
         getWindow().getDecorView().clearFocus();
     }
 
-    //Process to Pick the Photo
+    /**
+     * Pick a photo to the galery
+     */
     private fun pickImageGallery() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
@@ -139,12 +128,13 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-
-    //Process to save the email in shared preferences
+    /**
+     * Save the eMail in Shared Preferences
+     */
     fun saveSharedPreferences(em: String) {
         val prefs: SharedPreferences.Editor? =
             getSharedPreferences("prefsFile", Context.MODE_PRIVATE).edit()
-        if (cbLawyer.isChecked) {
+        if (joinLawyer.isChecked) {
             prefs!!.putString("userType", "lawyer")
         } else {
             prefs!!.putString("userType", "user")
@@ -163,7 +153,6 @@ class SignupActivity : AppCompatActivity() {
         val intent = Intent(this, JoinLawyerActivity::class.java)
         startActivity(intent)
     }
-
 
 
 }

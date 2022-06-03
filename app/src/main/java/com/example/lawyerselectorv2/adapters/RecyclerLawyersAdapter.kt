@@ -1,23 +1,22 @@
 package com.example.lawyerselectorv2.adapters
 
 import android.app.Activity
-import android.app.PendingIntent.getActivity
-import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
-import com.example.lawyerselectorv2.LawyerDetailsActivity
 import com.example.lawyerselectorv2.LawyerUser
 import com.example.lawyerselectorv2.R
-import com.example.lawyerselectorv2.TakeASelfieActivity
 import com.example.lawyerselectorv2.classes.Lawyer
 import kotlin.random.Random
+
+/**
+ * RecyclerLawyersAdapter:
+ *
+ */
 
 class RecyclerLawyersAdapter(private val context: Activity, private val arrLaw: ArrayList<Lawyer>) :
     Adapter<RecyclerLawyersAdapter.ViewHolder>() {
@@ -34,11 +33,12 @@ class RecyclerLawyersAdapter(private val context: Activity, private val arrLaw: 
         //Setter the Var of the Lawyers in the List
         holder.txtName.text = arrLaw[position].name
         holder.txtCountry.text = arrLaw[position].country
-        holder.txtVal.text =
-            "More of " + Random.nextInt(from = 0, until = 256).toString() + " valorations"
+        holder.txtDescr.text = concatCarreer(position)
+        holder.txtVal.text=
+        "More of " + Random.nextInt(from = 0, until = 256).toString() + " valorations"
         //onClick in View
         holder.itemView.setOnClickListener {
-            goToLawyerProfile()
+            goToLawyerProfile(position)
         }
     }
 
@@ -51,17 +51,37 @@ class RecyclerLawyersAdapter(private val context: Activity, private val arrLaw: 
         var txtName: TextView
         var txtCountry: TextView
         var txtVal: TextView
+        var txtDescr: TextView
 
         init {
             txtName = itemView.findViewById(R.id.lawName)
             txtCountry = itemView.findViewById(R.id.lawCountry)
             txtVal = itemView.findViewById(R.id.lawValorations)
+            txtDescr = itemView.findViewById(R.id.lawDescription)
         }
     }
 
-    private fun goToLawyerProfile(){
-        val intent:Intent = Intent(context, LawyerUser::class.java)
+    private fun goToLawyerProfile(i:Int) {
+        val intent: Intent = Intent(context, LawyerUser::class.java)
+        intent.putExtra("arrLaw",  arrLaw[i]);
         context.startActivity(intent)
-        context.overridePendingTransition( R.anim.left_to_right, R.anim.right_to_left );
+        context.overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+    }
+
+    private fun concatCarreer(i: Int): String {
+        var conc: String = ""
+        if (arrLaw[i].commercial.equals("true")) {
+            conc += "Commercial\n"
+        }
+        if (arrLaw[i].criminal.equals("true")) {
+            conc += "Criminal\n"
+        }
+        if (arrLaw[i].family.equals("true")) {
+            conc += "Family\n"
+        }
+        if (arrLaw[i].labor.equals("true")) {
+            conc += "Labor\n"
+        }
+        return conc
     }
 }

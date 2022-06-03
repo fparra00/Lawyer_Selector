@@ -12,7 +12,9 @@
         android:layout_height="match_parent"
         android:background="@color/bgLogin"
         android:orientation="vertical"
-        android:padding="30dp">
+        android:paddingLeft="30dp"
+        android:paddingTop="15dp"
+        android:paddingRight="30dp">
 
         <LinearLayout
             android:id="@+id/lyContainer_selfie"
@@ -32,7 +34,7 @@
                 android:id="@+id/lyTexts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="27dp"
+                android:layout_marginTop="15dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -77,17 +79,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/foundry_context"
 
-                    android:text="We'll compare your selfie to your ID photo. If they don't match, your reservation will be canceled. You can take the selfie later, we wait for you."
-                    android:textColor="@color/bgWhite" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/foundry_context"
-
-                    android:text="We'll compare your selfie to your ID photo. If they don't match, your reservation will be canceled. You can take the selfie later, we wait for you."
+                    android:text="Free exercise of the profession. The lawyer's code of ethics assumes the free exercise of his functions, so that he is not subject to pressure of any kind. Lawyers can decide whether or not to accept a case, and are free to determine the most appropriate actions to follow, always respecting the law and defending their client."
                     android:textColor="@color/bgWhite" />
 
                 <CheckBox
@@ -100,6 +92,16 @@
                     android:fontFamily="@font/foundry_context"
                     android:text="
 You accept our conditions and terms of service"
+                    android:textSize="10dp" />
+
+                <CheckBox
+                    android:id="@+id/cbLawyer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-5dp"
+
+                    android:fontFamily="@font/foundry_context"
+                    android:text="You accept  ethical and moral code of lawyers"
                     android:textSize="10dp" />
             </LinearLayout>
 
@@ -114,7 +116,8 @@ You accept our conditions and terms of service"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="clip_vertical|fill_vertical|end"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
                     android:background="@drawable/arrow_icon_circle"
                     android:orientation="vertical"></LinearLayout>
             </LinearLayout>

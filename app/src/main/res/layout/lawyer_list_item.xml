@@ -75,7 +75,7 @@
                 android:layout_marginTop="5dp"
                 android:ellipsize="end"
                 android:fontFamily="@font/foundry_context"
-                android:maxLines="2"
+                android:maxLines="5"
                 android:text="Legal and family environment"
                 android:textColor="@color/fontGrey"
                 android:textSize="12dp" />
@@ -92,7 +92,7 @@
             <LinearLayout
                 android:id="@+id/lyPhotoVal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:weightSum="1">
@@ -100,7 +100,7 @@
                 <ImageView
                     android:id="@+id/imgRating"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="60dp"
                     app:srcCompat="@drawable/rating" />
             </LinearLayout>
 

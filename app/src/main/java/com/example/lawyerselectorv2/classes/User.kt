@@ -2,7 +2,7 @@ package com.example.lawyerselectorv2.classes
 
 import java.io.Serializable
 
-/*
+/**
 USER:
 Class used to instantiate ONLY PERSONAL DETAILS of a normal user (client) or a Lawyer.
 Personal details like Name, city...
@@ -25,6 +25,7 @@ class User(
     val city: String
     val postalCode: String
     val addres: String
+
     //Constructor
     init {
         this.id = id
@@ -35,6 +36,7 @@ class User(
         this.postalCode = postalCode
         this.addres = addres
     }
+
     //Serial ID
     companion object {
         const val serialVersionUID = 56789L

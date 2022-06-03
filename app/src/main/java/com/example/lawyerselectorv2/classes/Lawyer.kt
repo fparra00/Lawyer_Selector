@@ -2,6 +2,9 @@ package com.example.lawyerselectorv2.classes
 
 import java.io.Serializable
 
+/**
+ * LAWYER:
+ */
 class Lawyer(
     //Internal Variables
     id: Int,
@@ -15,9 +18,11 @@ class Lawyer(
     commercial:String,
     criminal:String,
     family:String,
-    labor:String
+    labor:String,
+    careerDetails:LawyerCarreer,
 
-) : Serializable {
+
+    ) : Serializable {
     val id: Int
     val name: String
     val telephone: String
@@ -30,7 +35,7 @@ class Lawyer(
     val criminal:String
     val family:String
     val labor:String
-
+    val careerDetails:LawyerCarreer
     //Constructor
     init {
         this.id = id
@@ -45,9 +50,14 @@ class Lawyer(
         this.criminal = criminal
         this.family = family
         this.labor = labor
+        this.careerDetails = careerDetails
     }
     //Serial ID
     companion object {
         const val serialVersionUID = 56789L
+    }
+
+    override fun toString(): String {
+        return "Lawyer(id=$id, name='$name', telephone='$telephone', country='$country', city='$city', postalCode='$postalCode', addres='$addres', administrative='$administrative', commercial='$commercial', criminal='$criminal', family='$family', labor='$labor', careerDetails=$careerDetails)"
     }
 }

@@ -24,6 +24,9 @@ class SplashScreenActivity : AppCompatActivity() {
         enableAnimator()
     }
 
+    /**
+     * Enable the Animation in Splash Screen
+     */
     private fun enableAnimator() {
         var anim: Animation = AnimationUtils.loadAnimation(this, R.anim.desplaz_up)
         var anim2: Animation = AnimationUtils.loadAnimation(this, R.anim.desplaz_down)

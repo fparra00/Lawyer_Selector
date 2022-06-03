@@ -9,18 +9,25 @@ import android.view.animation.TranslateAnimation
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.lawyerselectorv2.classes.Lawyer
 import kotlinx.android.synthetic.main.activity_lawyer_user.*
 
 class LawyerUser : AppCompatActivity() {
 
     //Aux Vars
     private lateinit var lyKnowledgeAnim: LinearLayout
+    private lateinit var lawyerUser: Lawyer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lawyer_user)
         //Initialize Vars
         lyKnowledgeAnim = lyKnowledge
+        if (intent.getSerializableExtra("arrLaw") != null) {
+            lawyerUser = intent.getSerializableExtra("arrLaw") as Lawyer
+            setDatesLawyer()
+        }
+
         //..onClicks..
         lyOnKnowledge.setOnClickListener {
             showLy(lyKnowledgeAnim, lyOnKnowledge, lawName4)
@@ -33,8 +40,20 @@ class LawyerUser : AppCompatActivity() {
         }
     }
 
+    private fun setDatesLawyer() {
+        lwName.text = lawyerUser.name
+        lwLocation.text = lawyerUser.country
+        lwBio.text = lawyerUser.careerDetails.description
+        lyStudie1.text = lawyerUser.careerDetails.studie1
+        lwStudie1.text = lawyerUser.careerDetails.studie1_description
+        lyStudie2.text = lawyerUser.careerDetails.studie2
+        lwStudie2.text = lawyerUser.careerDetails.studie2_description
+        lyStudie3.text = lawyerUser.careerDetails.studie3
+        lwStudie3.text = lawyerUser.careerDetails.studie3_description
+    }
 
-    public fun showLy(ly: LinearLayout, cly: LinearLayout, tv: TextView) {
+
+    private fun showLy(ly: LinearLayout, cly: LinearLayout, tv: TextView) {
         var set: AnimationSet = AnimationSet(true)
         var animation: Animation
         if (ly.visibility == View.GONE) {
