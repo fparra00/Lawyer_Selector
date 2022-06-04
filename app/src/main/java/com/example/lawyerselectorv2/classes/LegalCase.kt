@@ -4,39 +4,41 @@ import java.io.Serializable
 
 /**
  * LEGAL CASE:
- * 
+ *
  */
 class LegalCase(
 //Internal Variables
-    id: Int,
-    name: String,
-    telephone: String,
-    country: String,
-    city: String,
-    postalCode: String,
-    addres: String
+    tittle: String,
+    description: String,
+    date: String,
+    hour: String,
+    outsidePeople:String,
+    dscOutsidePeople:String
+
 ) : Serializable {
-    val id: Int
-    val name: String
-    val telephone: String
-    val country: String
-    val city: String
-    val postalCode: String
-    val addres: String
+    val tittle: String
+    val description: String
+    val date: String
+    val hour: String
+    val outsidePeople: String
+    val dscOutsidePeople:String
 
     //Constructor
     init {
-        this.id = id
-        this.name = name
-        this.telephone = telephone
-        this.country = country
-        this.city = city
-        this.postalCode = postalCode
-        this.addres = addres
+        this.tittle = tittle
+        this.description = description
+        this.date = date
+        this.hour = hour
+        this.outsidePeople = outsidePeople
+        this.dscOutsidePeople = dscOutsidePeople
     }
 
     //Serial ID
     companion object {
-        const val serialVersionUID = 56789L
+        const val serialVersionUID = 56769L
+    }
+
+    override fun toString(): String {
+        return "LegalCase(tittle='$tittle', description='$description', date='$date', hour='$hour', outsidePeople='$outsidePeople', dscOutsidePeople='$dscOutsidePeople')"
     }
 }

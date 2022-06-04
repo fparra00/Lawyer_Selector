@@ -76,7 +76,7 @@ class RecyclerLawyersAdapter(private val context: Activity, private val arrLaw: 
         val intent: Intent = Intent(context, LawyerUser::class.java)
         intent.putExtra("arrLaw", arrLaw[i]);
         context.startActivity(intent)
-        context.overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+        context.overridePendingTransition(R.anim.right_toleft_into_windows, R.anim.left_to_right_into_windows);
     }
 
     private fun concatCarreer(i: Int): String {

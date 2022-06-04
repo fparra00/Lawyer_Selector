@@ -146,7 +146,7 @@
                             app:hintTextColor="@color/bgWhite">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/txtDescription_2"
+                                android:id="@+id/txtTittle"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="4dp"
@@ -226,7 +226,7 @@
                             app:hintTextColor="@color/bgWhite">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/txtDescription_2"
+                                android:id="@+id/txtDescription_Case"
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
                                 android:layout_marginRight="4dp"
@@ -441,7 +441,7 @@
                             app:hintTextColor="@color/bgWhite">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/txtDescription_2"
+                                android:id="@+id/txtPeople_Desc"
                                 android:layout_width="match_parent"
                                 android:layout_height="80dp"
                                 android:layout_marginRight="4dp"
@@ -494,7 +494,7 @@
                     android:orientation="vertical">
 
                     <Button
-                        android:id="@+id/btnCreateLawyer2"
+                        android:id="@+id/btnCreateLawCase"
                         style="@style/Theme.AppCompat.NoActionBar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

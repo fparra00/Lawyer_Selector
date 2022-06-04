@@ -1,5 +1,6 @@
 package com.example.lawyerselectorv2
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
@@ -36,6 +37,10 @@ class PrincipalMenuActivity : AppCompatActivity() {
         //Aux Functions
         checkFilters()
         checkTopMenu()
+        //..onClicks
+        btnCreateCase.setOnClickListener {
+            goToLawyerProfile()
+        }
     }
 
     private fun checkTopMenu() {
@@ -201,6 +206,12 @@ class PrincipalMenuActivity : AppCompatActivity() {
         var controller: LayoutAnimationController = LayoutAnimationController(set, 0.25f)
         ly.layoutAnimation = controller
         ly.startAnimation(animation)
+    }
+
+    private fun goToLawyerProfile() {
+        val intent: Intent = Intent(this, CreateLegalCaseActivity::class.java)
+        this.startActivity(intent)
+        this.overridePendingTransition(R.anim.right_toleft_into_windows, R.anim.left_to_right_into_windows);
     }
 
 

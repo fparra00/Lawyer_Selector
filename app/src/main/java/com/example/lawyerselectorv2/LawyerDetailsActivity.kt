@@ -13,11 +13,8 @@ import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_lawyer_details.*
-import kotlinx.android.synthetic.main.activity_lawyer_details.autocomGender
-import kotlinx.android.synthetic.main.activity_lawyer_details.btnCreateLawyer2
 import java.text.SimpleDateFormat
 import kotlin.random.Random
-
 
 class LawyerDetailsActivity : AppCompatActivity() {
 
@@ -25,7 +22,7 @@ class LawyerDetailsActivity : AppCompatActivity() {
     lateinit var emailPref: String
     lateinit var getPrefs: SharedPreferences
     lateinit var personalDatesLawyer: User
-    lateinit var birthDate:String
+    lateinit var birthDate: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,11 +33,12 @@ class LawyerDetailsActivity : AppCompatActivity() {
         //Save the personal dates of the lawyer with the intent
         if (getIntent().getSerializableExtra("personalDatesLawyer") != null) personalDatesLawyer =
             getIntent().getSerializableExtra("personalDatesLawyer") as User
+
         //Aux Functions
         auxParameters()
 
         //.... onClicks ....
-        btnCreateLawyer2.setOnClickListener {
+        btnCreateCase.setOnClickListener {
             createLawyer()
         }
         txtDescription_2.setOnClickListener {
@@ -119,12 +117,11 @@ class LawyerDetailsActivity : AppCompatActivity() {
         }
     }
 
-    private fun auxParameters(){
+    private fun auxParameters() {
         txtDescription_2.setEnabled(true);
         txtDescription_2.setTextIsSelectable(true);
         txtDescription_2.setFocusable(false);
         txtDescription_2.setFocusableInTouchMode(false);
-
         txtBirthday_2.setEnabled(true);
         txtBirthday_2.setTextIsSelectable(true);
         txtBirthday_2.setFocusable(false);

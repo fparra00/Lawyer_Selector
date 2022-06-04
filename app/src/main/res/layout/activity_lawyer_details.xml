@@ -505,7 +505,7 @@ You accept our conditions and terms of service"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btnCreateLawyer2"
+                android:id="@+id/btnCreateCase"
                 style="@style/Theme.AppCompat.NoActionBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -32,7 +32,7 @@ class SignupActivity_2 : AppCompatActivity() {
         userType = getPrefs.getString("userType", "null").toString()
 
         //.... onClicks ....
-        btnCreateLawyer2.setOnClickListener {
+        btnCreateCase.setOnClickListener {
             //Debemos de Comprobar Formulario Antes
             if (userType.equals("user")) createUser()
             if (userType.equals("lawyer")) createLawyer()

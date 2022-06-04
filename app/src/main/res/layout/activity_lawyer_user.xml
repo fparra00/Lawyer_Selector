@@ -140,7 +140,7 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/btnCreateLawyer2"
+                            android:id="@+id/btnCreateCase"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="80dp"

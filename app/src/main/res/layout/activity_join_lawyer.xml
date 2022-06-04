@@ -8,7 +8,7 @@
     tools:context=".JoinLawyerActivity">
 
     <LinearLayout
-        android:id="@+id/PrincipalApp"
+        android:id="@+id/lyLoadingScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/bgLogin"
@@ -18,7 +18,7 @@
         android:paddingRight="30dp">
 
         <LinearLayout
-            android:id="@+id/lyContainer_selfie"
+            android:id="@+id/lyContainerLoad"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/bgLogin"

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/PrincipalApp"
+    android:id="@+id/lyLoadingScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgLogin"
@@ -11,7 +11,7 @@
     tools:context=".TakeASelfieActivity">
 
     <LinearLayout
-        android:id="@+id/lyContainer_selfie"
+        android:id="@+id/lyContainerLoad"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/bgLogin"
