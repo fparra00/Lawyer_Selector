@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lawyerselectorv2">
-
     <!-- PERMISSIONS -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -12,82 +11,61 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
-
-        <!-- LAWYER DETAILS_2-->
+        <!-- CREATE LEGAL CASE -->
         <activity
-            android:name=".LawyerDetailsActivity_2"
-            android:exported="true">
-        </activity>
-
-        <!-- LAWYER USER -->
-        <activity
-            android:name=".LawyerUser"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-
-        <!-- LAWYER DETAILS-->
-        <activity
-            android:name=".LawyerDetailsActivity"
-            android:exported="true">
-        </activity>
-
-        <!-- JOIN LAWYER -->
-        <activity
-            android:name=".JoinLawyerActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-        </activity>
-
-        <!-- PRINCIPAL MENU LAWYERS -->
-        <activity
-            android:name=".PrincipalMenuActivity"
+            android:name=".CreateLegalCaseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <!-- LAWYER DETAILS_2 -->
+        <activity
+            android:name=".LawyerDetailsActivity_2"
+            android:exported="true"></activity> <!-- LAWYER USER -->
+        <activity
+            android:name=".LawyerUser"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- LAWYER DETAILS -->
+        <activity
+            android:name=".LawyerDetailsActivity"
+            android:exported="true"></activity> <!-- JOIN LAWYER -->
+        <activity
+            android:name=".JoinLawyerActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity> <!-- PRINCIPAL MENU LAWYERS -->
+        <activity
+            android:name=".PrincipalMenuActivity"
+            android:exported="true"></activity>
         <!-- SIGN UP 2 -->
         <activity
             android:name=".SignupActivity_2"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-
-        <!-- TAKE A SELFIE -->
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- TAKE A SELFIE -->
         <activity
             android:name=".TakeASelfieActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-        </activity>
-
-        <!-- SIGN UP  -->
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity> <!-- SIGN UP -->
         <activity
             android:name=".SignupActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-
-        <!-- SPLASH SCREEN-->
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- SPLASH SCREEN -->
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true">
-        </activity>
-
-        <!-- LOGIN ACTIVITY -->
+            android:exported="true"></activity> <!-- LOGIN ACTIVITY -->
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-
-        <!-- MAIN ACTIVITY -->
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- MAIN ACTIVITY -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-
-        <!-- META DATA -->
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- META DATA -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
 </manifest>

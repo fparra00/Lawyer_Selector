@@ -53,9 +53,7 @@ class LawyerDetailsActivity_2 : AppCompatActivity() {
             addLawyersDetails()
         }
 
-        MaterialAlertDialogBuilder(this)
-            // Add customization options here
-            .show()
+
     }
 
     /**

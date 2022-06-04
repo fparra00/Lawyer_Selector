@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lyApp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgLogin"
+
+    android:orientation="vertical"
+    tools:context=".CreateLegalCaseActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false">
+
+        <LinearLayout
+            android:id="@+id/appPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lyUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lyIcons1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lyArrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/arrow"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@drawable/arrow_icon"
+                            android:orientation="vertical"></LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/foundry_context"
+                        android:gravity="center_vertical"
+                        android:text=" Let us help you find your lawyer!"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="Enter the details of the legal case you are involved in, and we will find the best lawyer for you"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="12dp" />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/materialDivider7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyTittle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="TITTLE/IDENTIFIER"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/foundry_context"
+                        android:text=" Briefly introduce a title, to identify the case"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:id="@+id/lys1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView29"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/foundry_context"
+                            android:text="Tittle (min 10 charachters)"
+                            android:textColor="@color/bgWhite"
+                            android:textSize="12dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtDescription"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="auto"
+                            android:outlineAmbientShadowColor="@color/bgWhite"
+                            android:outlineSpotShadowColor="@color/bgWhite"
+                            android:textColorHint="@color/bgWhite"
+                            app:boxStrokeColor="@color/bgWhite"
+                            app:boxStrokeWidth="1dp"
+                            app:counterOverflowTextColor="@color/bgWhite"
+                            app:hintTextColor="@color/bgWhite">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtDescription_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="4dp"
+                                android:cursorVisible="false"
+                                android:focusable="auto"
+                                android:textSize="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/materialDivider11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="DESCRIPTION"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="Enter the details of the legal case in which you are involved, with great detail, please"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:id="@+id/lys1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView29"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/foundry_context"
+                            android:text="Description (min 100 charachters)"
+                            android:textColor="@color/bgWhite"
+                            android:textSize="12dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtDescription"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="auto"
+                            android:outlineAmbientShadowColor="@color/bgWhite"
+                            android:outlineSpotShadowColor="@color/bgWhite"
+                            android:textColorHint="@color/bgWhite"
+                            app:boxStrokeColor="@color/bgWhite"
+                            app:boxStrokeWidth="1dp"
+                            app:counterOverflowTextColor="@color/bgWhite"
+                            app:hintTextColor="@color/bgWhite">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtDescription_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginRight="4dp"
+                                android:cursorVisible="false"
+                                android:focusable="auto"
+                                android:textSize="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/materialDivider11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="WHEN DID IT HAPPEN?"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/foundry_context"
+                        android:text=" Enter the date, or an approximation of when it happened"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtDate_l"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:hint="dd/mm/aaaa"
+
+                            android:outlineAmbientShadowColor="@color/bgWhite"
+                            android:outlineSpotShadowColor="@color/bgWhite"
+                            android:textColorHint="@color/bgWhite"
+                            app:boxStrokeColor="@color/bgWhite"
+                            app:boxStrokeWidth="1dp"
+                            app:counterOverflowTextColor="@color/bgWhite"
+                            app:helperTextTextColor="@color/fontGrey"
+                            app:hintTextColor="@color/bgWhite"
+                            app:startIconDrawable="@drawable/check_icon">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtDate_law"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="4dp"
+                                android:cursorVisible="false"
+                                android:focusable="false"
+                                android:textSize="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtHour_l"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:hint="00:00h"
+
+                            android:outlineAmbientShadowColor="@color/bgWhite"
+                            android:outlineSpotShadowColor="@color/bgWhite"
+                            android:textColorHint="@color/bgWhite"
+                            app:boxStrokeColor="@color/bgWhite"
+                            app:boxStrokeWidth="1dp"
+                            app:counterOverflowTextColor="@color/bgWhite"
+                            app:helperTextTextColor="@color/fontGrey"
+                            app:hintTextColor="@color/bgWhite"
+                            app:startIconDrawable="@drawable/hour_icon">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtHour_law"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="4dp"
+                                android:cursorVisible="false"
+                                android:focusable="false"
+                                android:textSize="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/materialDivider13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyOutside"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="OUTSIDE PEOPLE? "
+                        android:textColor="@color/bgWhite"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="Are there any outsiders on the case?"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="12dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rgSelection"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="5dp"
+                        android:checkedButton="@id/rge2"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rge1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/foundry_context"
+                            android:textColor="@color/bgWhite"
+                            android:text="YES" />
+
+                        <RadioButton
+                            android:id="@+id/rge2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/foundry_context"
+                            android:textColor="@color/bgWhite"
+                            android:text="NO" />
+
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/lyPerson"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/foundry_context"
+                            android:text=" Who is he and how has he been involved in your legal case?"
+                            android:textColor="@color/bgWhite"
+                            android:textSize="12dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtDescription"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="auto"
+                            android:outlineAmbientShadowColor="@color/bgWhite"
+                            android:outlineSpotShadowColor="@color/bgWhite"
+                            android:textColorHint="@color/bgWhite"
+                            app:boxStrokeColor="@color/bgWhite"
+                            app:boxStrokeWidth="1dp"
+                            app:counterOverflowTextColor="@color/bgWhite"
+                            app:hintTextColor="@color/bgWhite">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtDescription_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_marginRight="4dp"
+                                android:cursorVisible="false"
+                                android:focusable="auto"
+                                android:textSize="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <CheckBox
+                            android:id="@+id/cbLawyer3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-5dp"
+
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/foundry_context"
+                            android:text="This person have more of 16 years old"
+                            android:textSize="10dp" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/materialDivider12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1" />
+
+                    <CheckBox
+                        android:id="@+id/cbLawyer4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-5dp"
+
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/foundry_context"
+                        android:text=" You agree that the data is stored in our database and processed by our developers"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnCreateLawyer2"
+                        style="@style/Theme.AppCompat.NoActionBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/btn_signin_normal"
+                        android:fontFamily="@font/foundry_context"
+                        android:text="Next"
+                        android:textAllCaps="false"
+                        android:textColor="@color/bgWhite"
+                        android:textSize="15dp"
+                        android:theme="@style/Theme.AppCompat.NoActionBar"
+                        app:backgroundTint="@null" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
