@@ -1,15 +1,25 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
-        <!-- Add these -->
         <item name="materialCalendarStyle">@style/Widget.MaterialComponents.MaterialCalendar</item>
         <item name="materialCalendarFullscreenTheme">@style/ThemeOverlay.MaterialComponents.MaterialCalendar.Fullscreen</item>
         <item name="materialCalendarTheme">@style/ThemeOverlay.MaterialComponents.MaterialCalendar</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
     </style>
 
     <!-- Style of Box Color -->
     <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="boxStrokeColor">@color/btnSignIn</item>
         <item name="boxStrokeWidth">10dp</item>
+    </style>
+
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/bgWhite</item>
+        <item name="colorSecondary">@color/bgWhite</item>
+        <item name="colorSurface">@color/bgWhite</item>
+        <item name="colorOnSurface">@color/bgWhite</item>
+        <item name="alertDialogStyle">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+
     </style>
 
     <!-- Style of Dialog -->

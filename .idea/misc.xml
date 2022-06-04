@@ -29,7 +29,7 @@
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_lawyer_user.xml" value="0.358695652173913" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_principal_menu.xml" value="0.22" />
+        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_principal_menu.xml" value="0.25" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_signup.xml" value="0.29250457038391225" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_signup2.xml" value="0.33" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/activity_splash_screen.xml" value="0.358695652173913" />
@@ -41,6 +41,8 @@
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/list_item_lawyer.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/layout/list_lawyer_item.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/menu/top_app_bar.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/whysxpvrrv/Desktop/ProyectoFinal/LawyerSelector/LawyerSelector_vFinal/app/src/main/res/menu/top_bar_menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

@@ -259,7 +259,7 @@
 
 
             <LinearLayout
-                android:id="@+id/lySpeciality"
+                android:id="@+id/lyFilter"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
@@ -282,7 +282,7 @@
                     app:chipSpacing="2dp">
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/chip"
+                        android:id="@+id/chAll"
                         style="@style/Widget.MaterialComponents.Chip.Entry"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -295,7 +295,7 @@
                         app:theme="@style/Theme.MaterialComponents" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/chip2"
+                        android:id="@+id/chLabor"
                         style="@style/Widget.MaterialComponents.Chip.Entry"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -309,7 +309,7 @@
                         app:theme="@style/Theme.MaterialComponents" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/chip3"
+                        android:id="@+id/chFamily"
                         style="@style/Widget.MaterialComponents.Chip.Entry"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -322,7 +322,7 @@
                         app:theme="@style/Theme.MaterialComponents" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/chip4"
+                        android:id="@+id/chCommercial"
                         style="@style/Widget.MaterialComponents.Chip.Entry"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -335,7 +335,7 @@
                         app:theme="@style/Theme.MaterialComponents" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/chip5"
+                        android:id="@+id/chRealState"
                         style="@style/Widget.MaterialComponents.Chip.Entry"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -348,7 +348,7 @@
                         app:theme="@style/Theme.MaterialComponents" />
 
                     <com.google.android.material.chip.Chip
-                        android:id="@+id/chip6"
+                        android:id="@+id/chAdministrative"
                         style="@style/Widget.MaterialComponents.Chip.Entry"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

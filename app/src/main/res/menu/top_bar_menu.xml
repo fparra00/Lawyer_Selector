@@ -1,16 +1,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/page_1"
-        android:enabled="true"
-        android:icon="@drawable/home_icon"
-        android:title="prueba"
-        app:showAsAction="ifRoom" />
+
+    <!-- FILTER ICON -->
     <item
         android:id="@+id/iconFilterBot"
         android:enabled="true"
-        app:showAsAction="ifRoom"
         android:icon="@drawable/filter_icon"
+        android:title="prueba"
+        app:showAsAction="ifRoom" />
+
+    <!-- LOG OUT ICON -->
+    <item
+        android:id="@+id/page_2"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/login_out"
         android:title="prueba"/>
 
 </menu>

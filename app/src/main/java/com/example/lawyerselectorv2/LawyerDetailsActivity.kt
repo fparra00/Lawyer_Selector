@@ -66,12 +66,12 @@ class LawyerDetailsActivity : AppCompatActivity() {
                 "postal code" to personalDatesLawyer.postalCode,
                 "adress" to personalDatesLawyer.addres,
                 "email" to emailPref,
-                "criminal" to chip.isChecked.toString(),
-                "labor" to chip2.isChecked.toString(),
-                "family" to chip3.isChecked.toString(),
-                "commercial" to chip4.isChecked.toString(),
-                "real_state" to chip5.isChecked.toString(),
-                "administrative" to chip6.isChecked.toString(),
+                "criminal" to chAll.isChecked.toString(),
+                "labor" to chLabor.isChecked.toString(),
+                "family" to chFamily.isChecked.toString(),
+                "commercial" to chCommercial.isChecked.toString(),
+                "real_state" to chRealState.isChecked.toString(),
+                "administrative" to chAdministrative.isChecked.toString(),
                 "birthDate" to birthDate
             )
         ).addOnSuccessListener {

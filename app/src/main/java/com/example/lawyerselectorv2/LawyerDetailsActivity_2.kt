@@ -13,6 +13,7 @@ import android.view.animation.TranslateAnimation
 import android.widget.ArrayAdapter
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -51,6 +52,10 @@ class LawyerDetailsActivity_2 : AppCompatActivity() {
         btnCreateLawyer2.setOnClickListener {
             addLawyersDetails()
         }
+
+        MaterialAlertDialogBuilder(this)
+            // Add customization options here
+            .show()
     }
 
     /**

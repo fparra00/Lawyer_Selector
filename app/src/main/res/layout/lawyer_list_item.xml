@@ -27,7 +27,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/imgLawyer"
                 android:layout_width="match_parent"
                 android:adjustViewBounds="true"
 
