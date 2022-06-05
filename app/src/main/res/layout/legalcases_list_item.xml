@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lawyerItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginTop="10dp"
+    android:background="@color/fontMain"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/lyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lyPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgHammer"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/hammer" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/caseTittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/fontMain"
+                android:ellipsize="end"
+                android:fontFamily="@font/foundry_context"
+                android:maxLines="1"
+                android:text=" Mutual Agreement Divorce"
+                android:textColor="@color/bgWhite"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/caseDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/fontMain"
+                android:ellipsize="end"
+                android:fontFamily="@font/foundry_context"
+                android:maxLines="2"
+                android:text="Legal dissolution of a marriage, at the request of one or both spouses, when the causes provided by law occur."
+                android:textColor="@color/fontGrey"
+                android:textSize="12dp"
+                tools:ignore="TextContrastCheck" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lyDivider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_weight="2.6"
+        android:orientation="horizontal">
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
+

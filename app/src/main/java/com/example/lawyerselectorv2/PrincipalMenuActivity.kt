@@ -20,7 +20,6 @@ import com.google.android.material.navigation.NavigationView
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_my_profile.*
 import kotlinx.android.synthetic.main.activity_principal_menu.*
 import kotlinx.android.synthetic.main.activity_principal_menu.btnCreateCase
 import kotlinx.android.synthetic.main.activity_principal_menu.drawerLayout
@@ -54,7 +53,6 @@ class PrincipalMenuActivity : AppCompatActivity() {
         //..onClicks
         btnCreateCase.setOnClickListener {
             goToLawyerProfile()
-
         }
     }
 
@@ -261,8 +259,6 @@ class PrincipalMenuActivity : AppCompatActivity() {
             R.anim.left_to_right_into_windows
         );
     }
-
-
     private fun goToMyProfile() {
         val intent: Intent = Intent(this, MyProfileActivity::class.java)
         this.startActivity(intent)

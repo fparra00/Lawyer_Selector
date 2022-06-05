@@ -64,11 +64,11 @@ class RecyclerLawyersAdapter(private val context: Activity, private val arrLaw: 
         var imgLawyer: ImageView
 
         init {
-            txtName = itemView.findViewById(R.id.lawName)
-            txtCountry = itemView.findViewById(R.id.lawCountry)
+            txtName = itemView.findViewById(R.id.caseTittle)
+            txtCountry = itemView.findViewById(R.id.caseDescription)
             txtVal = itemView.findViewById(R.id.lawValorations)
             txtDescr = itemView.findViewById(R.id.lawDescription)
-            imgLawyer = itemView.findViewById(R.id.imgLawyer)
+            imgLawyer = itemView.findViewById(R.id.imgHammer)
         }
     }
 

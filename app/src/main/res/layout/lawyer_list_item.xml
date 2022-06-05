@@ -27,7 +27,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imgLawyer"
+                android:id="@+id/imgHammer"
                 android:layout_width="match_parent"
                 android:adjustViewBounds="true"
 
@@ -43,7 +43,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/lawName"
+                android:id="@+id/caseTittle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/fontMain"
@@ -55,7 +55,7 @@
                 android:textSize="16dp" />
 
             <TextView
-                android:id="@+id/lawCountry"
+                android:id="@+id/caseDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
