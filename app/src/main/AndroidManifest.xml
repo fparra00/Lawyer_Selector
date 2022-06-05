@@ -11,17 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
+        <activity
+            android:name=".navmenu_left_activities.MyProfileActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!-- LOADING SCREEN -->
         <activity
             android:name=".LoadingScreen"
-            android:exported="true">
-        </activity>
-        <!-- CREATE LEGAL CASE -->
+            android:exported="true"></activity> <!-- CREATE LEGAL CASE -->
         <activity
             android:name=".CreateLegalCaseActivity"
-            android:exported="true">
-
-        </activity> <!-- LAWYER DETAILS_2 -->
+            android:exported="true"></activity> <!-- LAWYER DETAILS_2 -->
         <activity
             android:name=".LawyerDetailsActivity_2"
             android:exported="true" /> <!-- LAWYER USER -->
@@ -29,11 +34,7 @@
             android:name=".LawyerUser"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar"> <!-- LAWYER DETAILS -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".LawyerDetailsActivity"
@@ -46,7 +47,7 @@
             android:name=".PrincipalMenuActivity"
             android:exported="true">
 
-        </activity><!-- SIGN UP 2 -->
+        </activity> <!-- SIGN UP 2 -->
         <activity
             android:name=".SignupActivity_2"
             android:exported="true"

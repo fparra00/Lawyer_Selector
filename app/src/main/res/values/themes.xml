@@ -12,6 +12,7 @@
         <item name="boxStrokeWidth">10dp</item>
     </style>
 
+    <!-- Style of Alert Dialog -->
     <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="colorPrimary">@color/bgWhite</item>
         <item name="colorSecondary">@color/bgWhite</item>
@@ -19,7 +20,6 @@
         <item name="colorOnSurface">@color/bgWhite</item>
         <item name="alertDialogStyle">@style/ThemeOverlay.App.MaterialAlertDialog</item>
         <item name="materialAlertDialogTitleTextStyle">@style/ThemeOverlay.App.MaterialAlertDialog</item>
-
     </style>
 
     <!-- Style of Dialog -->
@@ -30,5 +30,21 @@
         <item name="android:windowBackground">@drawable/background_dialog</item>
         <item name="android:textSize">10dp</item>
         <item name="subtitleTextColor">@color/etYellow</item>
+    </style>
+
+    <!-- Style of Left Nav -->
+    <style name="LeftNav"  parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="android:textColorPrimary">@color/bgGrey</item>
+        <item name="android:textColorSecondary">@color/bgLogin</item>
+        <item name="android:fontFamily">@font/abel</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <!-- Style of Left Nav Item-->
+    <style name="LeftNavItem"  parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="android:textColorPrimary">@color/bgLogin</item>
+        <item name="android:textColorSecondary">@color/bgLogin</item>
+        <item name="android:fontFamily">@font/abel</item>
+        <item name="android:textSize">17dp</item>
     </style>
 </resources>

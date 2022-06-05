@@ -6,15 +6,15 @@
         android:id="@+id/iconFilterBot"
         android:enabled="true"
         android:icon="@drawable/filter_icon"
-        android:title="prueba"
+        android:title="filter"
         app:showAsAction="ifRoom" />
 
     <!-- LOG OUT ICON -->
     <item
-        android:id="@+id/page_2"
+        android:id="@+id/iconHome"
         android:enabled="true"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/login_out"
-        android:title="prueba"/>
+        android:icon="@drawable/home_icon"
+        android:title="home"/>
 
 </menu>

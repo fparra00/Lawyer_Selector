@@ -80,7 +80,7 @@ class CreateLegalCaseActivity : AppCompatActivity() {
                 "description_of_external_people" to case.dscOutsidePeople
             )
         ).addOnSuccessListener {
-            //QUE HACER EN CASO DE QUE SE INTROUZCAN BIEN EN BDD
+            goToLoadinsScreen()
         }.addOnFailureListener { e ->
             Log.w(ContentValues.TAG, "Error adding document", e)
         }
@@ -153,8 +153,12 @@ class CreateLegalCaseActivity : AppCompatActivity() {
     }
 
     //.... goTo ....
-    private fun goToLawyersDetail2() {
+    private fun goToLoadinsScreen() {
         val intent = Intent(this, LoadingScreen::class.java)
         startActivity(intent)
     }
+
+
+
+
 }

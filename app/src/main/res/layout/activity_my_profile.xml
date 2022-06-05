@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lyAppProfile"
+    android:layout_width="match_parent"
+    android:background="@color/bgLogin"
+    android:layout_height="match_parent"
+    tools:context=".navmenu_left_activities.MyProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/lyApp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fontMain"
+        android:orientation="vertical"
+        tools:context=".PrincipalMenuActivity">
+
+        <LinearLayout
+            android:id="@+id/lyTopMenuContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/topAppBar"
+                    style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/bgWhite"
+                    android:minHeight="?attr/actionBarSize"
+                    android:outlineSpotShadowColor="@color/bgWhite"
+                    app:menu="@menu/top_bar_menu"
+                    app:navigationIcon="@drawable/hamburguer_menu_icon"
+                    app:rippleColor="@color/bgWhite" />
+            </com.google.android.material.appbar.AppBarLayout>
+        </LinearLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.drawerlayout.widget.DrawerLayout
+                android:id="@+id/drawerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    >
+
+                <LinearLayout
+                    android:id="@+id/appPrincipal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lyUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lyTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:drawableEnd="@drawable/law_icon"
+                                android:fontFamily="@font/foundry_context"
+                                android:gravity="center_vertical"
+                                android:text="Congratulations, your profile has been verified!"
+                                android:textColor="@color/bgWhite"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/textView19"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/foundry_context"
+                                android:text="So that we can validate your profile, fill in at least the necessary fields. Remember that the more quality information you provide, the greater the chances you have of finding new students."
+                                android:textColor="@color/bgWhite"
+                                android:textSize="12dp" />
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/materialDivider7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyPerf1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/lyDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView27"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/check"
+                                    android:fontFamily="@font/foundry_context"
+                                    android:text="NAME"
+                                    android:textColor="@color/bgWhite"
+                                    android:textSize="14dp" />
+
+                                <LinearLayout
+                                    android:id="@+id/lys1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtDescription"
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:focusable="auto"
+                                        android:outlineAmbientShadowColor="@color/bgWhite"
+                                        android:outlineSpotShadowColor="@color/bgWhite"
+
+                                        android:textColorHint="@color/bgWhite"
+                                        app:boxStrokeColor="@color/bgWhite"
+                                        app:boxStrokeWidth="1dp"
+                                        app:counterOverflowTextColor="@color/bgWhite"
+
+                                        app:helperTextTextColor="@color/fontGrey"
+                                        app:hintTextColor="@color/bgWhite">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/txtDescription_2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:cursorVisible="false"
+                                            android:focusable="auto"
+                                            android:text="Fernando Parra"
+                                            android:textSize="12dp" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lyDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView27"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/check"
+                                    android:fontFamily="@font/foundry_context"
+                                    android:text="EMAIL"
+                                    android:textColor="@color/bgWhite"
+                                    android:textSize="14dp" />
+
+                                <LinearLayout
+                                    android:id="@+id/lys1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtDescription"
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:focusable="auto"
+                                        android:outlineAmbientShadowColor="@color/bgWhite"
+                                        android:outlineSpotShadowColor="@color/bgWhite"
+
+                                        android:textColorHint="@color/bgWhite"
+                                        app:boxStrokeColor="@color/bgWhite"
+                                        app:boxStrokeWidth="1dp"
+                                        app:counterOverflowTextColor="@color/bgWhite"
+
+                                        app:helperTextTextColor="@color/fontGrey"
+                                        app:hintTextColor="@color/bgWhite">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/txtDescription_2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:cursorVisible="false"
+                                            android:focusable="auto"
+                                            android:text="fparraoboe@gmail.com"
+                                            android:textSize="12dp" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/materialDivider15"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyPerf1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/lyDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView27"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/check"
+                                    android:fontFamily="@font/foundry_context"
+                                    android:text="COUNTRY"
+                                    android:textColor="@color/bgWhite"
+                                    android:textSize="14dp" />
+
+                                <LinearLayout
+                                    android:id="@+id/lys1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtDescription"
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:focusable="auto"
+                                        android:outlineAmbientShadowColor="@color/bgWhite"
+                                        android:outlineSpotShadowColor="@color/bgWhite"
+
+                                        android:textColorHint="@color/bgWhite"
+                                        app:boxStrokeColor="@color/bgWhite"
+                                        app:boxStrokeWidth="1dp"
+                                        app:counterOverflowTextColor="@color/bgWhite"
+
+                                        app:helperTextTextColor="@color/fontGrey"
+                                        app:hintTextColor="@color/bgWhite">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/txtDescription_2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:cursorVisible="false"
+                                            android:focusable="auto"
+                                            android:text="Spain"
+                                            android:textSize="12dp" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lyDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView27"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/check"
+                                    android:fontFamily="@font/foundry_context"
+                                    android:text="CITY"
+                                    android:textColor="@color/bgWhite"
+                                    android:textSize="16dp" />
+
+                                <LinearLayout
+                                    android:id="@+id/lys1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/txtDescription"
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:focusable="auto"
+                                        android:outlineAmbientShadowColor="@color/bgWhite"
+                                        android:outlineSpotShadowColor="@color/bgWhite"
+
+                                        android:textColorHint="@color/bgWhite"
+                                        app:boxStrokeColor="@color/bgWhite"
+                                        app:boxStrokeWidth="1dp"
+                                        app:counterOverflowTextColor="@color/bgWhite"
+
+                                        app:helperTextTextColor="@color/fontGrey"
+                                        app:hintTextColor="@color/bgWhite">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/txtDescription_2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:cursorVisible="false"
+                                            android:focusable="auto"
+                                            android:text="Úbeda"
+                                            android:textSize="12dp" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/materialDivider15"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btnCreateCase"
+                                style="@style/Theme.AppCompat.NoActionBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginRight="25dp"
+                                android:background="@drawable/btn_signin_normal"
+                                android:fontFamily="@font/foundry_context"
+                                android:text="Save and Continue"
+                                android:textAllCaps="false"
+                                android:textColor="@color/bgWhite"
+                                android:textSize="15dp"
+                                android:theme="@style/Theme.AppCompat.NoActionBar"
+                                app:backgroundTint="@null" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/Empty"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                </ScrollView>
+                <com.google.android.material.navigation.NavigationView
+                    android:id="@+id/navView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:background="@color/white"
+                    android:theme="@style/LeftNav"
+                    app:headerLayout="@layout/left_nav_header"
+                    app:itemTextAppearance="@style/LeftNavItem"
+                    app:itemTextColor="@color/bgLogin"
+                    app:menu="@menu/left_nav_menu"
+                    app:popupTheme="@style/LeftNav"></com.google.android.material.navigation.NavigationView>
+
+            </androidx.drawerlayout.widget.DrawerLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -9,15 +9,23 @@ import android.view.animation.LayoutAnimationController
 import android.view.animation.TranslateAnimation
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lawyerselectorv2.adapters.RecyclerLawyersAdapter
 import com.example.lawyerselectorv2.classes.Lawyer
 import com.example.lawyerselectorv2.classes.LawyerCarreer
+import com.example.lawyerselectorv2.navmenu_left_activities.MyProfileActivity
+import com.google.android.material.navigation.NavigationView
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_my_profile.*
 import kotlinx.android.synthetic.main.activity_principal_menu.*
+import kotlinx.android.synthetic.main.activity_principal_menu.btnCreateCase
+import kotlinx.android.synthetic.main.activity_principal_menu.drawerLayout
+import kotlinx.android.synthetic.main.activity_principal_menu.navView
+import kotlinx.android.synthetic.main.activity_principal_menu.topAppBar
 
 class PrincipalMenuActivity : AppCompatActivity() {
     //Aux Var
@@ -25,6 +33,7 @@ class PrincipalMenuActivity : AppCompatActivity() {
     private var adapter: RecyclerView.Adapter<RecyclerLawyersAdapter.ViewHolder>? = null
     private var lawArr = ArrayList<Lawyer>()
     private lateinit var lawyersRef: CollectionReference
+    private lateinit var NavView: NavigationView
     private lateinit var lawyersRefCar: CollectionReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,18 +41,29 @@ class PrincipalMenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_principal_menu)
         //Init Aux Vars
         lawyersRef = Firebase.firestore.collection("Lawyer")
+        NavView = navView
+        topAppBar.menu.removeItem(R.id.iconHome)
+
         //Functions that need to Recalculate
         getAllLawyers()
         //Aux Functions
         checkFilters()
         checkTopMenu()
+        checkLeftMenu()
+
         //..onClicks
         btnCreateCase.setOnClickListener {
             goToLawyerProfile()
+
         }
     }
 
     private fun checkTopMenu() {
+        //Click on the Navigation Icon
+        topAppBar.setNavigationOnClickListener {
+            drawerLayout.openDrawer(GravityCompat.START)
+        }
+        //Click on the other Icons of the Top Bar
         topAppBar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.iconFilterBot -> {
@@ -54,6 +74,19 @@ class PrincipalMenuActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun checkLeftMenu() {
+        NavView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.menuProfile -> {
+                    goToMyProfile()
+                    true
+                }
+                else -> false
+            }
+        }
+    }
+
 
     private fun checkFilters() {
         chAll.setOnClickListener {
@@ -184,7 +217,6 @@ class PrincipalMenuActivity : AppCompatActivity() {
     }
 
     private fun showLy(ly: LinearLayout) {
-
         var set: AnimationSet = AnimationSet(true)
         var animation: Animation? = null
 
@@ -200,6 +232,18 @@ class PrincipalMenuActivity : AppCompatActivity() {
                 Animation.RELATIVE_TO_SELF,
                 0.0f
             )
+        } else {
+            ly.visibility = View.GONE
+            animation = TranslateAnimation(
+                Animation.RELATIVE_TO_SELF,
+                0.0f,
+                Animation.RELATIVE_TO_SELF,
+                0.0f,
+                Animation.RELATIVE_TO_SELF,
+                0.0f,
+                Animation.RELATIVE_TO_SELF,
+                0.0f
+            )
         }
         animation!!.duration = 300
         set.addAnimation(animation)
@@ -208,10 +252,24 @@ class PrincipalMenuActivity : AppCompatActivity() {
         ly.startAnimation(animation)
     }
 
+    // .. goTo..
     private fun goToLawyerProfile() {
         val intent: Intent = Intent(this, CreateLegalCaseActivity::class.java)
         this.startActivity(intent)
-        this.overridePendingTransition(R.anim.right_toleft_into_windows, R.anim.left_to_right_into_windows);
+        this.overridePendingTransition(
+            R.anim.right_toleft_into_windows,
+            R.anim.left_to_right_into_windows
+        );
+    }
+
+
+    private fun goToMyProfile() {
+        val intent: Intent = Intent(this, MyProfileActivity::class.java)
+        this.startActivity(intent)
+        this.overridePendingTransition(
+            R.anim.right_toleft_into_windows,
+            R.anim.left_to_right_into_windows
+        );
     }
 
 

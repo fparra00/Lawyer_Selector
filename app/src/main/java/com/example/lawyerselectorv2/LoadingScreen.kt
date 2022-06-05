@@ -1,20 +1,18 @@
 package com.example.lawyerselectorv2
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import kotlinx.android.synthetic.main.activity_splash_screen.*
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.loading_screen.*
 
 class LoadingScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.loading_screen)
-
         //Aux Functions
         enableAnimator()
     }
@@ -25,7 +23,6 @@ class LoadingScreen : AppCompatActivity() {
      */
     private fun enableAnimator() {
         var anim: Animation = AnimationUtils.loadAnimation(this, R.anim.left_to_right)
-
         lyLoadingScreen.animation = anim
 
         Handler(Looper.getMainLooper()).postDelayed({

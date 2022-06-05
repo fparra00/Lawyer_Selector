@@ -17,7 +17,8 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/topAppBar"
@@ -25,6 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/bgWhite"
+                android:minHeight="?attr/actionBarSize"
                 android:outlineSpotShadowColor="@color/bgWhite"
                 app:menu="@menu/top_bar_menu"
                 app:navigationIcon="@drawable/hamburguer_menu_icon"
@@ -164,10 +166,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/lawyerRecycler"
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawerLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lawyerRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/navView"
+                android:layout_width="wrap_content"
+                app:headerLayout="@layout/left_nav_header"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@color/white"
+                app:popupTheme="@style/LeftNav"
+                app:itemTextColor="@color/bgLogin"
+                app:itemTextAppearance="@style/LeftNavItem"
+                android:theme="@style/LeftNav"
+                app:menu="@menu/left_nav_menu"></com.google.android.material.navigation.NavigationView>
+
+        </androidx.drawerlayout.widget.DrawerLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnCreateCase"
@@ -181,5 +203,7 @@
             app:rippleColor="@color/bgWhite"
             app:srcCompat="@drawable/search_icon"
             tools:ignore="SpeakableTextPresentCheck" />
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 </LinearLayout>
