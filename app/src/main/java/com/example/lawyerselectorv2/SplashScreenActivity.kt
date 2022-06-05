@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -32,7 +33,9 @@ class SplashScreenActivity : AppCompatActivity() {
         //Delete Shared Preferences in Case of Log Out
         getPrefs = getSharedPreferences("prefsFile", Context.MODE_PRIVATE)
         getPrefsEd = getSharedPreferences("prefsFile", Context.MODE_PRIVATE).edit()
-        if(getPrefs.all.isNotEmpty()) getPrefsEd.clear()
+
+        if (getPrefs.all.isNotEmpty()) getPrefsEd.clear().apply()
+
     }
 
     /**

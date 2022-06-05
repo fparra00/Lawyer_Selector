@@ -58,7 +58,7 @@
                     android:fontFamily="@font/abel"
                     android:gravity="center"
                     android:text="Be patient, we are looking for the best lawyer for your case! "
-                    android:textColor="#cfb175"
+                    android:textColor="@color/bgWhite"
                     android:textSize="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
