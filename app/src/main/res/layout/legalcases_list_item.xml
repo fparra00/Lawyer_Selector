@@ -20,15 +20,15 @@
         <LinearLayout
             android:id="@+id/lyPhoto"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imgHammer"
                 android:layout_width="match_parent"
-                android:layout_height="66dp"
+                android:layout_height="50dp"
 
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/hammer" />
@@ -50,7 +50,7 @@
                 android:ellipsize="end"
                 android:fontFamily="@font/foundry_context"
                 android:maxLines="1"
-                android:text=" Mutual Agreement Divorce"
+                android:text="Mutual Agreement Divorce"
                 android:textColor="@color/bgWhite"
                 android:textSize="16dp" />
 
@@ -68,6 +68,41 @@
                 android:textColor="@color/fontGrey"
                 android:textSize="12dp"
                 tools:ignore="TextContrastCheck" />
+
+            <LinearLayout
+                android:id="@+id/lyState"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/caseTittle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="6.5"
+                    android:background="@color/fontMain"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/foundry_context"
+                    android:maxLines="1"
+                    android:text="State:"
+                    android:textColor="@color/bgWhite"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/caseTittle3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/fontMain"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/foundry_context"
+                    android:maxLines="1"
+                    android:text="OPEN"
+                    android:textColor="#67E78A"
+                    android:textSize="12dp" />
+            </LinearLayout>
 
         </LinearLayout>
 

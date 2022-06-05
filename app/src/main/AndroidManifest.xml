@@ -12,13 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
         <activity
-            android:name=".navmenu_left_activities.myLegalCasesActivity"
+            android:name=".navmenu_left_activities.MyLegalCasesActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".navmenu_left_activities.MyProfileActivity"
@@ -49,7 +45,14 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- PRINCIPAL MENU LAWYERS -->
         <activity
             android:name=".PrincipalMenuActivity"
-            android:exported="true"></activity> <!-- SIGN UP 2 -->
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity> <!-- SIGN UP 2 -->
         <activity
             android:name=".SignupActivity_2"
             android:exported="true"
@@ -72,7 +75,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- META DATA -->
+            android:theme="@style/Theme.AppCompat.NoActionBar"> <!-- META DATA -->
+
+        </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

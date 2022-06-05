@@ -37,7 +37,17 @@
                     android:outlineSpotShadowColor="@color/bgWhite"
                     app:menu="@menu/top_bar_menu"
                     app:navigationIcon="@drawable/hamburguer_menu_icon"
-                    app:rippleColor="@color/bgWhite" />
+                    app:rippleColor="@color/bgWhite">
+
+                    <ImageView
+                        android:id="@+id/imgHammer"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_marginRight="20dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/logop" />
+                </com.google.android.material.appbar.MaterialToolbar>
             </com.google.android.material.appbar.AppBarLayout>
         </LinearLayout>
 

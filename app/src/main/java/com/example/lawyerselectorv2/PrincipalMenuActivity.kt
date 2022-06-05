@@ -15,16 +15,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.lawyerselectorv2.adapters.RecyclerLawyersAdapter
 import com.example.lawyerselectorv2.classes.Lawyer
 import com.example.lawyerselectorv2.classes.LawyerCarreer
+import com.example.lawyerselectorv2.navmenu_left_activities.MyLegalCasesActivity
 import com.example.lawyerselectorv2.navmenu_left_activities.MyProfileActivity
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_principal_menu.*
-import kotlinx.android.synthetic.main.activity_principal_menu.btnCreateCase
-import kotlinx.android.synthetic.main.activity_principal_menu.drawerLayout
-import kotlinx.android.synthetic.main.activity_principal_menu.navView
-import kotlinx.android.synthetic.main.activity_principal_menu.topAppBar
 
 class PrincipalMenuActivity : AppCompatActivity() {
     //Aux Var
@@ -76,8 +73,19 @@ class PrincipalMenuActivity : AppCompatActivity() {
     private fun checkLeftMenu() {
         NavView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
+                R.id.menuMyLawyers -> {
+                    true
+                }
                 R.id.menuProfile -> {
                     goToMyProfile()
+                    true
+                }
+                R.id.menuCases -> {
+                    goToMyLegalCases()
+                    true
+                }
+                R.id.menuLogOut -> {
+                    logOut()
                     true
                 }
                 else -> false
@@ -259,6 +267,7 @@ class PrincipalMenuActivity : AppCompatActivity() {
             R.anim.left_to_right_into_windows
         );
     }
+
     private fun goToMyProfile() {
         val intent: Intent = Intent(this, MyProfileActivity::class.java)
         this.startActivity(intent)
@@ -266,6 +275,20 @@ class PrincipalMenuActivity : AppCompatActivity() {
             R.anim.right_toleft_into_windows,
             R.anim.left_to_right_into_windows
         );
+    }
+
+    private fun goToMyLegalCases() {
+        val intent: Intent = Intent(this, MyLegalCasesActivity::class.java)
+        this.startActivity(intent)
+        this.overridePendingTransition(
+            R.anim.right_toleft_into_windows,
+            R.anim.left_to_right_into_windows
+        );
+    }
+
+    private fun logOut() {
+        val intent: Intent = Intent(this, SplashScreenActivity::class.java)
+        this.startActivity(intent)
     }
 
 

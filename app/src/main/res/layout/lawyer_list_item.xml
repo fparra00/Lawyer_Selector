@@ -52,20 +52,24 @@
                 android:maxLines="1"
                 android:text="Fernando Parra"
                 android:textColor="@color/bgWhite"
-                android:textSize="16dp" />
+                android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/caseDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="-5dp"
                 android:layout_marginTop="5dp"
                 android:background="@color/fontMain"
+                android:drawableStart="@drawable/location_icon"
+                android:drawablePadding="1dp"
                 android:ellipsize="end"
                 android:fontFamily="@font/foundry_context"
+                android:gravity="center_vertical"
                 android:maxLines="1"
                 android:text="Spain"
                 android:textColor="@color/fontGrey"
-                android:textSize="14dp"
+                android:textSize="12dp"
                 tools:ignore="TextContrastCheck" />
 
             <TextView
@@ -87,6 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
             android:orientation="vertical">
 
             <LinearLayout
@@ -101,6 +106,7 @@
                     android:id="@+id/imgRating"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
+                    android:layout_marginTop="-10dp"
                     app:srcCompat="@drawable/rating" />
             </LinearLayout>
 
@@ -135,7 +141,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="2dp"
         android:layout_marginRight="16dp"
         android:layout_weight="2.6"
         android:orientation="horizontal">

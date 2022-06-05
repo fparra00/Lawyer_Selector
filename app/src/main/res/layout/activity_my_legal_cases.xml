@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".navmenu_left_activities.myLegalCasesActivity">
+    tools:context=".navmenu_left_activities.MyLegalCasesActivity">
 
     <LinearLayout
         android:id="@+id/lyApp"
@@ -36,136 +36,19 @@
                     android:outlineSpotShadowColor="@color/bgWhite"
                     app:menu="@menu/top_bar_menu"
                     app:navigationIcon="@drawable/hamburguer_menu_icon"
-                    app:rippleColor="@color/bgWhite" />
-            </com.google.android.material.appbar.AppBarLayout>
-        </LinearLayout>
+                    app:rippleColor="@color/bgWhite">
 
-        <LinearLayout
-            android:id="@+id/lyFilterContainer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:id="@+id/lyFilter"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/foundry_context"
-                    android:text="Filter By:"
-                    android:textColor="@color/bgWhite"
-                    android:textSize="14dp" />
-
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="none">
-
-                    <com.google.android.material.chip.ChipGroup
-                        android:id="@+id/chipFilters"
+                    <ImageView
+                        android:id="@+id/imgHammer"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        app:chipSpacing="2dp"
-                        app:singleLine="true"
-                        app:singleSelection="true">
+                        android:layout_height="40dp"
 
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chAll"
-                            style="@style/Widget.MaterialComponents.Chip.Entry"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:focusedByDefault="true"
-                            android:text="All"
-                            android:textColor="@color/white"
-                            android:textSize="10dp"
-                            app:chipBackgroundColor="@color/btnSignIn"
-                            app:closeIconVisible="false"
-                            app:theme="@style/Theme.MaterialComponents" />
+                        android:layout_marginRight="20dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/logop" />
+                </com.google.android.material.appbar.MaterialToolbar>
 
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chCriminal"
-                            style="@style/Widget.MaterialComponents.Chip.Entry"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Criminal"
-                            android:textColor="@color/white"
-                            android:textSize="10dp"
-                            app:chipBackgroundColor="@color/btnSignIn"
-                            app:closeIconVisible="false"
-                            app:theme="@style/Theme.MaterialComponents" />
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chLabor"
-                            style="@style/Widget.MaterialComponents.Chip.Entry"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Labor"
-                            android:textColor="@color/white"
-                            android:textSize="10dp"
-                            app:chipBackgroundColor="@color/btnSignIn"
-                            app:closeIconVisible="false"
-                            app:theme="@style/Theme.MaterialComponents" />
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chFamily"
-                            style="@style/Widget.MaterialComponents.Chip.Entry"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Family"
-                            android:textColor="@color/white"
-                            android:textSize="10dp"
-                            app:chipBackgroundColor="@color/btnSignIn"
-                            app:closeIconVisible="false"
-                            app:theme="@style/Theme.MaterialComponents" />
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chCommercial"
-                            style="@style/Widget.MaterialComponents.Chip.Entry"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Commercial"
-                            android:textColor="@color/white"
-                            android:textSize="10dp"
-                            app:chipBackgroundColor="@color/btnSignIn"
-                            app:closeIconVisible="false"
-                            app:theme="@style/Theme.MaterialComponents" />
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chRealState"
-                            style="@style/Widget.MaterialComponents.Chip.Entry"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Real Estate"
-                            android:textColor="@color/white"
-                            android:textSize="10dp"
-                            app:chipBackgroundColor="@color/btnSignIn"
-                            app:closeIconVisible="false"
-                            app:theme="@style/Theme.MaterialComponents" />
-
-                        <com.google.android.material.chip.Chip
-                            android:id="@+id/chAdministrative"
-                            style="@style/Widget.MaterialComponents.Chip.Entry"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Administrative"
-                            android:textColor="@color/white"
-                            android:textSize="10dp"
-                            app:chipBackgroundColor="@color/btnSignIn"
-                            app:closeIconVisible="false"
-                            app:theme="@style/Theme.MaterialComponents" />
-                    </com.google.android.material.chip.ChipGroup>
-                </HorizontalScrollView>
-            </LinearLayout>
+            </com.google.android.material.appbar.AppBarLayout>
         </LinearLayout>
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -180,7 +63,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/lawyerRecycler"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+                    android:layout_height="match_parent"/>
 
                 <com.google.android.material.navigation.NavigationView
                     android:id="@+id/navView"
@@ -196,19 +79,6 @@
                     app:popupTheme="@style/LeftNav"></com.google.android.material.navigation.NavigationView>
 
             </androidx.drawerlayout.widget.DrawerLayout>
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/btnCreateCase"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp"
-                android:backgroundTint="@color/bgWhite"
-                android:outlineSpotShadowColor="@color/bgWhite"
-                app:rippleColor="@color/bgWhite"
-                app:srcCompat="@drawable/search_icon"
-                tools:ignore="SpeakableTextPresentCheck" />
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
