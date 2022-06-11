@@ -48,11 +48,9 @@ class LawyerDetailsActivity_2 : AppCompatActivity() {
         btnAddStudies.setOnClickListener {
             showLyStudies()
         }
-        btnCreateCase.setOnClickListener {
+        btnSignIn.setOnClickListener {
             addLawyersDetails()
         }
-
-
     }
 
     /**
@@ -75,7 +73,6 @@ class LawyerDetailsActivity_2 : AppCompatActivity() {
                 "description" to txtDescription_2.text.toString()
             )
         ).addOnSuccessListener {
-            //QUE HACER EN CASO DE QUE SE INTROUZCAN BIEN EN BDD
         }.addOnFailureListener { e ->
             Log.w(ContentValues.TAG, "Error adding document", e)
         }
@@ -113,7 +110,7 @@ class LawyerDetailsActivity_2 : AppCompatActivity() {
             "Master/Postgraduate",
             "Doctorate"
         )
-        val adapter = ArrayAdapter<String>(this, R.layout.list_item, )
+        val adapter = ArrayAdapter<String>(this, R.layout.list_item)
         val adapter2 = ArrayAdapter<String>(this, R.layout.list_item, items2)
         autocomDegree.setAdapter(adapter2)
         autocomDegree2.setAdapter(adapter2)

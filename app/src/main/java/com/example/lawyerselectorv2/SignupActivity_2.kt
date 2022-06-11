@@ -32,7 +32,7 @@ class SignupActivity_2 : AppCompatActivity() {
         userType = getPrefs.getString("userType", "null").toString()
 
         //.... onClicks ....
-        btnCreateCase.setOnClickListener {
+        btnSignIn.setOnClickListener {
             //Debemos de Comprobar Formulario Antes
             if (userType.equals("user")) createUser()
             if (userType.equals("lawyer")) createLawyer()
@@ -104,6 +104,7 @@ class SignupActivity_2 : AppCompatActivity() {
         val intent = Intent(this, TakeASelfieActivity::class.java)
         startActivity(intent)
     }
+
     private fun goToLawyerActivity() {
         val intent = Intent(this, LawyerDetailsActivity::class.java)
         intent.putExtra("personalDatesLawyer", personalDatesLawyer)

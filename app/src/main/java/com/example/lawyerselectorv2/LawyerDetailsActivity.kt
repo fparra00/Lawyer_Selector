@@ -38,7 +38,7 @@ class LawyerDetailsActivity : AppCompatActivity() {
         auxParameters()
 
         //.... onClicks ....
-        btnCreateCase.setOnClickListener {
+        btnSignIn.setOnClickListener {
             createLawyer()
         }
         txtDescription_2.setOnClickListener {

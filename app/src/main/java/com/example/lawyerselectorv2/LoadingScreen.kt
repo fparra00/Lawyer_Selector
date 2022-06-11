@@ -7,16 +7,24 @@ import android.os.Looper
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import com.example.lawyerselectorv2.classes.LegalCase
 import kotlinx.android.synthetic.main.loading_screen.*
 
 class LoadingScreen : AppCompatActivity() {
+
+    //Aux Var
+    lateinit var legalCase: LegalCase
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.loading_screen)
+
+        if (intent.getSerializableExtra("casoLegal") != null) {
+            legalCase = intent.getSerializableExtra("casoLegal") as LegalCase
+        }
         //Aux Functions
         enableAnimator()
     }
-
 
     /**
      * Enable the Animation in Splash Screen
@@ -26,8 +34,9 @@ class LoadingScreen : AppCompatActivity() {
         lyLoadingScreen.animation = anim
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val mainIntent = Intent(this, LawyerUser::class.java)
-            startActivity(mainIntent)
+            val intent = Intent(this, LawyerUser::class.java)
+            intent.putExtra("casoLegal", legalCase)
+            startActivity(intent)
             finish()
         }, 3500)
     }

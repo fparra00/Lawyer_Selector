@@ -28,7 +28,7 @@ class SignupActivity : AppCompatActivity() {
         btnPhoto.setOnClickListener {
             pickImageGallery()
         }
-        btnCreateCase.setOnClickListener {
+        btnSignIn.setOnClickListener {
             createUser()
         }
 

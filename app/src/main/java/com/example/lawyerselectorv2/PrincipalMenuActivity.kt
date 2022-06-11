@@ -48,7 +48,7 @@ class PrincipalMenuActivity : AppCompatActivity() {
         checkLeftMenu()
 
         //..onClicks
-        btnCreateCase.setOnClickListener {
+        btnSignIn.setOnClickListener {
             goToLawyerProfile()
         }
     }
@@ -290,6 +290,8 @@ class PrincipalMenuActivity : AppCompatActivity() {
         val intent: Intent = Intent(this, SplashScreenActivity::class.java)
         this.startActivity(intent)
     }
+
+
 
 
 }

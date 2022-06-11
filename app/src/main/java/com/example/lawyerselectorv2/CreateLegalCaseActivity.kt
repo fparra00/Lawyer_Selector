@@ -80,7 +80,7 @@ class CreateLegalCaseActivity : AppCompatActivity() {
                 "description_of_external_people" to case.dscOutsidePeople
             )
         ).addOnSuccessListener {
-            goToLoadinsScreen()
+            goToLoadinsScreen(case)
         }.addOnFailureListener { e ->
             Log.w(ContentValues.TAG, "Error adding document", e)
         }
@@ -153,8 +153,10 @@ class CreateLegalCaseActivity : AppCompatActivity() {
     }
 
     //.... goTo ....
-    private fun goToLoadinsScreen() {
+    private fun goToLoadinsScreen(case:LegalCase) {
+        Log.d("prueba", case.tittle + " in CreateLegalCase")
         val intent = Intent(this, LoadingScreen::class.java)
+        intent.putExtra("casoLegal", case)
         startActivity(intent)
     }
 

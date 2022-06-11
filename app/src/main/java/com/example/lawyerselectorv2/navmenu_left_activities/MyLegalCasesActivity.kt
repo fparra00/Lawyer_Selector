@@ -1,6 +1,8 @@
 package com.example.lawyerselectorv2.navmenu_left_activities
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -18,15 +20,18 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_my_legal_cases.*
 
 class MyLegalCasesActivity : AppCompatActivity() {
+
     //Aux Var
-    private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<LegalCasesAdapter.ViewHolder>? = null
-    private var caseArr = ArrayList<LegalCase>()
     private lateinit var userRef: CollectionReference
     private lateinit var lc: LegalCase
     private lateinit var userRefCase: CollectionReference
-    lateinit var NavView: NavigationView
-
+    private lateinit var NavView: NavigationView
+    private lateinit var emailPref: String
+    private lateinit var userType: String
+    private lateinit var getPrefs: SharedPreferences
+    private var layoutManager: RecyclerView.LayoutManager? = null
+    private var adapter: RecyclerView.Adapter<LegalCasesAdapter.ViewHolder>? = null
+    private var caseArr = ArrayList<LegalCase>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +40,10 @@ class MyLegalCasesActivity : AppCompatActivity() {
         userRef = Firebase.firestore.collection("User")
         NavView = navView
         topAppBar.menu.removeItem(R.id.iconFilterBot)
+        //Init Shared Preferences
+        getPrefs = getSharedPreferences("prefsFile", Context.MODE_PRIVATE)
+        emailPref = getPrefs.getString("email", "null").toString()
+        userType = getPrefs.getString("userType", "null").toString()
         //Aux Functions
         getAllLegalCases()
         checkTopMenu()
@@ -43,7 +52,7 @@ class MyLegalCasesActivity : AppCompatActivity() {
 
 
     private fun getAllLegalCases() {
-        userRefCase = Firebase.firestore.collection("User").document("fparraoboe4@gmail.com")
+        userRefCase = Firebase.firestore.collection("User").document(emailPref)
             .collection("Legal Cases")
         userRefCase.get().addOnSuccessListener { result ->
             for (case in result) {
@@ -105,6 +114,7 @@ class MyLegalCasesActivity : AppCompatActivity() {
         }
     }
 
+    //..goTo..
     private fun goToHome() {
         val intent: Intent = Intent(this, PrincipalMenuActivity::class.java)
         this.startActivity(intent)

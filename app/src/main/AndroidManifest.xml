@@ -32,8 +32,7 @@
             android:exported="true" /> <!-- LAWYER USER -->
         <activity
             android:name=".LawyerUser"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"> <!-- LAWYER DETAILS -->
+            android:exported="true"> <!-- LAWYER DETAILS -->
 
         </activity>
         <activity
@@ -67,15 +66,22 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- SPLASH SCREEN -->
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true" /> <!-- LOGIN ACTIVITY -->
+            android:exported="true">
+
+        </activity><!-- LOGIN ACTIVITY -->
         <activity
             android:name=".LoginActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- MAIN ACTIVITY -->
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+
+        </activity><!-- MAIN ACTIVITY -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"> <!-- META DATA -->
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+            <!-- META DATA -->
 
         </activity>
         <meta-data

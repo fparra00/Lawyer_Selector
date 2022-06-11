@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         // .... onClicks ....
         btnLogIn.setOnClickListener {
-            goToLoginView()
+            goTosignIn()
         }
         btnLogInGoogle.setOnClickListener {
             goToLogInGoogle()
@@ -81,6 +81,13 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, SignupActivity::class.java)
         startActivity(intent)
     }
-
+    private fun goTosignIn(){
+        val intent: Intent = Intent(this, LoginActivity::class.java)
+        this.startActivity(intent)
+        this.overridePendingTransition(
+            R.anim.right_toleft_into_windows,
+            R.anim.left_to_right_into_windows
+        );
+    }
 
 }
