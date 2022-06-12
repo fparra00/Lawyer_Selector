@@ -24,7 +24,7 @@ class MyLegalCasesActivity : AppCompatActivity() {
     //Aux Var
     private lateinit var userRef: CollectionReference
     private lateinit var lc: LegalCase
-    private lateinit var userRefCase: CollectionReference
+    private lateinit var refCase: CollectionReference
     private lateinit var NavView: NavigationView
     private lateinit var emailPref: String
     private lateinit var userType: String
@@ -44,6 +44,7 @@ class MyLegalCasesActivity : AppCompatActivity() {
         getPrefs = getSharedPreferences("prefsFile", Context.MODE_PRIVATE)
         emailPref = getPrefs.getString("email", "null").toString()
         userType = getPrefs.getString("userType", "null").toString()
+        refCase = Firebase.firestore.collection("LegalCases")
         //Aux Functions
         getAllLegalCases()
         checkTopMenu()
@@ -52,26 +53,31 @@ class MyLegalCasesActivity : AppCompatActivity() {
 
 
     private fun getAllLegalCases() {
-        userRefCase = Firebase.firestore.collection("User").document(emailPref)
-            .collection("Legal Cases")
-        userRefCase.get().addOnSuccessListener { result ->
+        refCase.get().addOnSuccessListener { result ->
             for (case in result) {
-                lc = LegalCase(
-                    case.data.getValue("tittle") as String,
-                    case.data.getValue("description") as String,
-                    case.data.getValue("date") as String,
-                    case.data.getValue("hour") as String,
-                    case.data.getValue("external_people") as String,
-                    case.data.getValue("description_of_external_people") as String,
-                )
-                caseArr.add(lc)
-                //Set the Lawyers in the Adapter
-                layoutManager = LinearLayoutManager(this)
-                lawyerRecycler.layoutManager = layoutManager
-                adapter = LegalCasesAdapter(this, caseArr)
-                lawyerRecycler.adapter = adapter
+                if (case.data.getValue("user").equals(emailPref)) {
+                    lc = LegalCase(
+                        case.data.getValue("tittle") as String,
+                        case.data.getValue("description") as String,
+                        case.data.getValue("date") as String,
+                        case.data.getValue("hour") as String,
+                        case.data.getValue("outsidePeople") as String,
+                        case.data.getValue("dscOutsidePeople") as String,
+                        case.data.getValue("user") as String,
+                        case.data.getValue("status") as String,
+                        case.data.getValue("lawyer") as String,
+                        )
+                    caseArr.add(lc)
+                    //Set the Lawyers in the Adapter
+                    layoutManager = LinearLayoutManager(this)
+                    lawyerRecycler.layoutManager = layoutManager
+                    adapter = LegalCasesAdapter(this, caseArr)
+                    lawyerRecycler.adapter = adapter
+                }
             }
         }
+
+
     }
 
     private fun checkTopMenu() {

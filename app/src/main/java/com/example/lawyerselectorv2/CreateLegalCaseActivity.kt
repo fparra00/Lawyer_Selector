@@ -65,7 +65,11 @@ class CreateLegalCaseActivity : AppCompatActivity() {
             txtDate_law.text.toString(),
             txtHour_law.text.toString(),
             rge1.isChecked.toString(),
-            txtPeople_Desc.text.toString()
+            txtPeople_Desc.text.toString(),
+            emailPref,
+            "0",
+            ""
+
         )
         userDb =
             Firebase.firestore.collection("User").document(emailPref).collection("Legal Cases")

@@ -18,7 +18,7 @@
     <!-- Font Colors -->
     <color name="fontMain">#3b414f</color>
     <color name="fontLoginSecondary">#525765</color>
-    <color name="fontError">#DA2222</color>
+    <color name="fontError">#FA4435</color>
     <color name="fontGrey">#7a7c7b</color>
 
     <!-- Edit Text Bg Color -->

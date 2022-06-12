@@ -32,6 +32,11 @@ class PrincipalMenuActivity : AppCompatActivity() {
     private lateinit var NavView: NavigationView
     private lateinit var lawyersRefCar: CollectionReference
 
+
+    companion object StaticVars {
+        lateinit var allLawyer: ArrayList<Lawyer>
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal_menu)
@@ -39,7 +44,6 @@ class PrincipalMenuActivity : AppCompatActivity() {
         lawyersRef = Firebase.firestore.collection("Lawyer")
         NavView = navView
         topAppBar.menu.removeItem(R.id.iconHome)
-
         //Functions that need to Recalculate
         getAllLawyers()
         //Aux Functions
@@ -144,6 +148,7 @@ class PrincipalMenuActivity : AppCompatActivity() {
                         )
                         //Recover and Instantiate Lawyers
                         var l: Lawyer = Lawyer(
+                            (lawyer.data.getValue("email").toString()),
                             (lawyer.data.getValue("id") as Number).toInt(),
                             lawyer.data.getValue("name").toString(),
                             lawyer.data.getValue("telephone").toString(),
@@ -164,8 +169,9 @@ class PrincipalMenuActivity : AppCompatActivity() {
                         lawyerRecycler.layoutManager = layoutManager
                         adapter = RecyclerLawyersAdapter(this, lawArr)
                         lawyerRecycler.adapter = adapter
+                        //Set lawyers in Satatic Var
+                        allLawyer = lawArr
                     }
-
                 }
             }
         }
@@ -196,6 +202,7 @@ class PrincipalMenuActivity : AppCompatActivity() {
                         )
                         //Recover and Instantiate Lawyers
                         var l: Lawyer = Lawyer(
+                            (lawyer.data.getValue("email").toString()),
                             (lawyer.data.getValue("id") as Number).toInt(),
                             lawyer.data.getValue("name").toString(),
                             lawyer.data.getValue("telephone").toString(),
@@ -290,8 +297,6 @@ class PrincipalMenuActivity : AppCompatActivity() {
         val intent: Intent = Intent(this, SplashScreenActivity::class.java)
         this.startActivity(intent)
     }
-
-
 
 
 }

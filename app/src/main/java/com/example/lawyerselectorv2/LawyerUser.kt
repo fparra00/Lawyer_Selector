@@ -2,7 +2,6 @@ package com.example.lawyerselectorv2
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationSet
@@ -16,15 +15,17 @@ import com.example.lawyerselectorv2.classes.Lawyer
 import com.example.lawyerselectorv2.classes.LegalCase
 import com.example.lawyerselectorv2.navmenu_left_activities.MyLegalCasesActivity
 import com.example.lawyerselectorv2.navmenu_left_activities.MyProfileActivity
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_lawyer_user.*
 
 class LawyerUser : AppCompatActivity() {
     //Aux Vars
     private lateinit var lawyerUser: Lawyer
-    private lateinit var legalCase: LegalCase
     private lateinit var lyKnowledgeAnim: LinearLayout
-    lateinit var NavView: NavigationView
+    private lateinit var NavView: NavigationView
+    private var legalCase: LegalCase? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,16 +36,14 @@ class LawyerUser : AppCompatActivity() {
         NavView = navView
 
         //Check Intent
-        if (intent.getSerializableExtra("arrLaw") != null) {
-            lawyerUser = intent.getSerializableExtra("arrLaw") as Lawyer
-            setDatesLawyer()
-        }
-        if (intent.getSerializableExtra("casoLegal") != null) {
-            legalCase = intent.getSerializableExtra("casoLegal") as LegalCase
-            Log.d("prueba", legalCase.tittle + " in legaluser")
-        } else {
-            Log.d("prueba",  "No se encuentr")
-
+        if (intent != null) {
+            if (intent.getSerializableExtra("arrLaw") != null) {
+                lawyerUser = intent.getSerializableExtra("arrLaw") as Lawyer
+                setDatesLawyer()
+            }
+            if (intent.getSerializableExtra("casoLegal") != null) {
+                legalCase = intent.getSerializableExtra("casoLegal") as LegalCase
+            }
         }
 
         //Functions Aux
@@ -61,18 +60,38 @@ class LawyerUser : AppCompatActivity() {
         lyOnStudies.setOnClickListener {
             showLy(lyStudies, lyOnStudies, lawStudies)
         }
-        btnCreateLawCase.setOnClickListener {
-            sendLegalCase()
+        btnContactLawyer.setOnClickListener {
+            if (legalCase != null) contactDialog(true) else contactDialog(false)
         }
     }
 
 
-
-
-
-    private fun sendLegalCase() {
+    private fun contactDialog(ch: Boolean) {
+        if (!ch) showDialog() else showDialogWaitingResponse()
 
     }
+
+    private fun showDialog() {
+        MaterialAlertDialogBuilder(this, R.style.CustomDialogTheme)
+            .setTitle("UPS! :(")
+            .setMessage("You haven't created any legal case yet, do you want to do it now?")
+            .setNegativeButton("No, thanks") { dialog, which ->
+            }
+            .setPositiveButton("Okay!") { dialog, which ->
+                goToCreateLegalCase()
+            }.show()
+    }
+
+
+    private fun showDialogWaitingResponse() {
+        MaterialAlertDialogBuilder(this, R.style.CustomDialogTheme)
+            .setTitle("have a little patience")
+            .setMessage("We have just sent your legal case to the lawyer, when he accepts it, you will be able to see his contact information!")
+            .setPositiveButton("Okay!") { dialog, which ->
+                btnContactLawyer.text = "Awaiting Response"
+            }.show()
+    }
+
 
 
     private fun setDatesLawyer() {
@@ -180,8 +199,7 @@ class LawyerUser : AppCompatActivity() {
         );
     }
 
-
-    private fun goToLawyerProfile() {
+    private fun goToCreateLegalCase() {
         val intent: Intent = Intent(this, CreateLegalCaseActivity::class.java)
         this.startActivity(intent)
         this.overridePendingTransition(
@@ -189,6 +207,7 @@ class LawyerUser : AppCompatActivity() {
             R.anim.left_to_right_into_windows
         );
     }
+
 
     private fun goToMyProfile() {
         val intent: Intent = Intent(this, MyProfileActivity::class.java)

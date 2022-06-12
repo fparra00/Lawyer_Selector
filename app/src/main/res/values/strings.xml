@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">LawyerSelector.v2</string>
     <string name="client_web_id_google">888646003393-i9n5akhfv91v8pl8hmivfs4530o69n2r.apps.googleusercontent.com</string>
+    <string name="client_paypal">AYQOOEwb1YMXEWa-RmKzdm-B4w1zfhxXTea82XJ7jmxWRwRbdL0HdSpLcAOsSGAvCw9nzTXMwfSS6nG4
+</string>
+
     <string name="l1">Can understand and communicate in a basic way</string>
     <string name="l2">You can hold a conversation and communicate fluently</string>
     <string name="l3">He speaks and understands perfectly, he is native</string>
 
-</resources>
 
+</resources>
 

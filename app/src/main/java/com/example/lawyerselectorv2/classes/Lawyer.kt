@@ -7,6 +7,7 @@ import java.io.Serializable
  */
 class Lawyer(
     //Internal Variables
+    email: String,
     id: Int,
     name: String,
     telephone: String,
@@ -23,6 +24,7 @@ class Lawyer(
 
 
     ) : Serializable {
+    val email:String
     val id: Int
     val name: String
     val telephone: String
@@ -38,6 +40,7 @@ class Lawyer(
     val careerDetails:LawyerCarreer
     //Constructor
     init {
+        this.email = email
         this.id = id
         this.name = name
         this.telephone = telephone

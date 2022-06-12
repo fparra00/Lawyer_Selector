@@ -61,6 +61,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:background="@color/fontMain"
+                android:drawableEnd="@drawable/arrow_icon_white"
                 android:ellipsize="end"
                 android:fontFamily="@font/foundry_context"
                 android:maxLines="2"
@@ -90,7 +91,7 @@
                     android:textSize="12dp" />
 
                 <TextView
-                    android:id="@+id/caseTittle3"
+                    android:id="@+id/txtStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -108,6 +109,167 @@
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:id="@+id/lyInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/lyCont1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lyState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/caseTittle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="6.5"
+                    android:background="@color/fontMain"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/foundry_context"
+                    android:maxLines="1"
+                    android:text="Date:"
+                    android:textColor="@color/bgWhite"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/txtDatelc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/fontMain"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/foundry_context"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:text="12/07/21"
+                    android:textColor="@color/fontGrey"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/caseTittle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="6.5"
+                    android:background="@color/fontMain"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/foundry_context"
+                    android:maxLines="1"
+                    android:text="Info:"
+                    android:textColor="@color/bgWhite"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/txtPeoplelc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|left"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/fontMain"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/foundry_context"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="Fernando Parra"
+                    android:textColor="@color/fontGrey"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/caseTittle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="6.5"
+                    android:background="@color/fontMain"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/foundry_context"
+                    android:maxLines="1"
+                    android:text="Hour:"
+                    android:textColor="@color/bgWhite"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/txtHourlc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/fontMain"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/foundry_context"
+                    android:foregroundGravity="left"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:text="07:21 h"
+                    android:textColor="@color/fontGrey"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyCont2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="clip_vertical|center_horizontal|fill_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnSignIn2"
+                style="@style/Theme.AppCompat.NoActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/btn_signin_normal"
+                android:drawableLeft="@drawable/contact_icon_white"
+                android:fontFamily="@font/foundry_context"
+                android:text="Contact"
+                android:textAllCaps="false"
+                android:textColor="@color/bgWhite"
+                android:textSize="15dp"
+                android:theme="@style/Theme.AppCompat.NoActionBar"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/lyDivider"

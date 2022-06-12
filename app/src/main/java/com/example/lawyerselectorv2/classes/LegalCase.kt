@@ -12,8 +12,12 @@ class LegalCase(
     description: String,
     date: String,
     hour: String,
-    outsidePeople:String,
-    dscOutsidePeople:String
+    outsidePeople: String,
+    dscOutsidePeople: String,
+    user: String,
+    status: String,
+    lawyer: String
+
 
 ) : Serializable {
     val tittle: String
@@ -21,7 +25,10 @@ class LegalCase(
     val date: String
     val hour: String
     val outsidePeople: String
-    val dscOutsidePeople:String
+    val dscOutsidePeople: String
+    val user: String
+    val status: String
+    val lawyer: String
 
     //Constructor
     init {
@@ -31,6 +38,9 @@ class LegalCase(
         this.hour = hour
         this.outsidePeople = outsidePeople
         this.dscOutsidePeople = dscOutsidePeople
+        this.user = user
+        this.status = status
+        this.lawyer = lawyer
     }
 
     //Serial ID
@@ -39,6 +49,8 @@ class LegalCase(
     }
 
     override fun toString(): String {
-        return "LegalCase(tittle='$tittle', description='$description', date='$date', hour='$hour', outsidePeople='$outsidePeople', dscOutsidePeople='$dscOutsidePeople')"
+        return "LegalCase(tittle='$tittle', description='$description', date='$date', hour='$hour', outsidePeople='$outsidePeople', dscOutsidePeople='$dscOutsidePeople', user='$user', status='$status', lawyer='$lawyer')"
     }
+
+
 }

@@ -46,7 +46,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goToPrincipalMenu() {
-
         val intent: Intent = Intent(this, TakeASelfieActivity::class.java)
         this.startActivity(intent)
         this.overridePendingTransition(

@@ -12,15 +12,6 @@
         <item name="boxStrokeWidth">10dp</item>
     </style>
 
-    <!-- Style of Alert Dialog -->
-    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
-        <item name="colorPrimary">@color/bgWhite</item>
-        <item name="colorSecondary">@color/bgWhite</item>
-        <item name="colorSurface">@color/bgWhite</item>
-        <item name="colorOnSurface">@color/bgWhite</item>
-        <item name="alertDialogStyle">@style/ThemeOverlay.App.MaterialAlertDialog</item>
-        <item name="materialAlertDialogTitleTextStyle">@style/ThemeOverlay.App.MaterialAlertDialog</item>
-    </style>
 
     <!-- Style of Dialog -->
     <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
@@ -29,8 +20,18 @@
         <item name="fontFamily">@font/foundry_context</item>
         <item name="android:windowBackground">@drawable/background_dialog</item>
         <item name="android:textSize">10dp</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.Button</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.App.Button</item>
         <item name="subtitleTextColor">@color/etYellow</item>
+        <item name="colorPrimary">@color/bgWhite</item>
+        <item name="colorSecondary">@color/bgWhite</item>
+        <item name="colorSurface">@color/bgLogin</item>
     </style>
+    <style name="CustomDialogTheme.App.Button" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/etYellow</item>
+    </style>
+
+
 
     <!-- Style of Left Nav -->
     <style name="LeftNav"  parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
@@ -46,5 +47,37 @@
         <item name="android:textColorSecondary">@color/bgLogin</item>
         <item name="android:fontFamily">@font/abel</item>
         <item name="android:textSize">17dp</item>
+    </style>
+
+    <!-- Style of Alert Dialog -->
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/bgLogin</item>
+        <item name="colorSecondary">@color/bgLogin</item>
+        <item name="colorSurface">@color/bgLogin</item>
+        <item name="colorOnSurface">@color/bgLogin</item>
+        <item name="alertDialogStyle">@color/bgLogin</item>
+    </style>
+
+    <style name="MaterialAlertDialog.App" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+    </style>
+
+    <style name="MaterialAlertDialog.App.Title.Text" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">@color/etYellow</item>
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
+    </style>
+
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">40dp</item>
     </style>
 </resources>
