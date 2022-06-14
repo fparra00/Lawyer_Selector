@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lyContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgLogin"
+    android:orientation="vertical"
+    tools:context=".payments.PaymentCreditActivity">
+
+
+    <!--Just add in between the action bar and bottom bar some other view with height = 0dp and weight = 1. I added one more LinearLayout-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lyScroll"
+            android:layout_width="match_parent"
+            android:layout_height="1400dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lyApp"
+                android:layout_width="match_parent"
+                android:layout_height="1200dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/lyTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lyBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ly1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/caseTittle5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/fontMain"
+                                android:drawableStart="@drawable/arrowleft_icon_white"
+                                android:drawablePadding="20dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/abel"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:text="Payment Details"
+                                android:textColor="@color/bgWhite"
+                                android:textSize="25dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ly2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ly_rounded"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+
+                            <LinearLayout
+                                android:id="@+id/ly11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/caseTittle6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/abel"
+                                        android:maxLines="1"
+                                        android:text="Actual Amount"
+
+                                        android:textColor="@color/bgLogin"
+                                        android:textSize="18dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/caseTittle7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:fontFamily="@font/abel"
+                                        android:maxLines="1"
+                                        android:text="Inclusive of Taxes"
+                                        android:textColor="#9B9B9B"
+                                        android:textSize="15dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/caseTittle8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/abel"
+                                        android:gravity="end"
+                                        android:maxLines="1"
+                                        android:text="$ 0. 40"
+                                        android:textColor="@color/bgLogin"
+                                        android:textSize="16dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/view5"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+
+                            <LinearLayout
+                                android:id="@+id/ly11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/caseTittle6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/abel"
+                                        android:maxLines="1"
+                                        android:text="First time discount "
+
+                                        android:textColor="@color/bgLogin"
+                                        android:textSize="18dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/caseTittle8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/abel"
+                                        android:gravity="end"
+                                        android:maxLines="1"
+                                        android:text="- $ 0. 10"
+                                        android:textColor="@color/bgLogin"
+                                        android:textSize="16dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/view10"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:color/darker_gray" />
+
+                            <TextView
+                                android:id="@+id/caseTittle10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/abel"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:text="Total   $0.30"
+                                android:textColor="@color/bgLogin"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyMid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/caseTittle11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/abel"
+                        android:maxLines="1"
+                        android:text="User Details"
+                        android:textColor="#9B9B9B"
+                        android:textSize="15dp" />
+
+                    <LinearLayout
+                        android:id="@+id/lyUserDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ly_rounded"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/caseTittle13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+
+                            android:fontFamily="@font/abel"
+                            android:maxLines="1"
+                            android:text="Fernando Parra"
+                            android:textColor="@color/bgLogin"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/caseTittle14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/abel"
+                            android:maxLines="1"
+                            android:text="+34 633 908 735"
+                            android:textColor="#9B9B9B"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/caseTittle15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/abel"
+                            android:maxLines="1"
+                            android:text="fparraoboe@gmail.com"
+                            android:textColor="#9B9B9B"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/caseTittle3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/abel"
+                        android:maxLines="1"
+                        android:text="Payment Methods"
+                        android:textColor="#9B9B9B"
+                        android:textSize="15dp" />
+
+                    <LinearLayout
+                        android:id="@+id/lyContainerPaymentMethods"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ly_rounded"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/lyCreditCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:id="@+id/lawName4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:drawableStart="@drawable/credit_icon"
+                                android:drawableEnd="@drawable/arrow_down_icon"
+                                android:drawablePadding="10dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/abel"
+                                android:maxLines="1"
+                                android:text="Credit Card"
+                                android:textColor="@color/bgLogin"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/lyViewCard"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:foregroundGravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:id="@+id/lyCard"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:foregroundGravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <FrameLayout
+                                        android:id="@+id/cdsynapFormR"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:foregroundGravity="center">
+
+                                    </FrameLayout>
+
+                                </LinearLayout>
+
+                                <Button
+                                    android:id="@+id/synapButtonR"
+                                    style="@style/Theme.AppCompat.NoActionBar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="37dp"
+                                    android:layout_marginLeft="80dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginRight="80dp"
+                                    android:background="@drawable/btn_signin_normal"
+                                    android:fontFamily="@font/foundry_context"
+                                    android:text="Pay!"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/bgWhite"
+                                    android:textSize="15dp"
+                                    android:theme="@style/Theme.AppCompat.NoActionBar"
+                                    app:backgroundTint="@null" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/view3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="@android:color/darker_gray" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyBank"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:id="@+id/lawName5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:drawableStart="@drawable/bank_icon"
+                                android:drawableEnd="@drawable/arrow_down_icon"
+                                android:drawablePadding="10dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/abel"
+                                android:maxLines="1"
+                                android:text="Bank Account"
+                                android:textColor="@color/bgLogin"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/lyViewBank"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:foregroundGravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:id="@+id/lyBank"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:foregroundGravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/caseTittle9"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/abel"
+                                        android:maxLines="1"
+                                        android:text="Not Implemented Yet! :("
+
+                                        android:textColor="@color/bgLogin"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/view3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="@android:color/darker_gray" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lyPayPal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:id="@+id/lawName5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:drawableStart="@drawable/paypal_icon"
+                                android:drawableEnd="@drawable/arrow_down_icon"
+                                android:drawablePadding="10dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/abel"
+                                android:maxLines="1"
+                                android:text="PayPal"
+                                android:textColor="@color/bgLogin"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/lyViewPayPal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:foregroundGravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:id="@+id/lyBank"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:foregroundGravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/caseTittle9"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/abel"
+                                        android:maxLines="1"
+                                        android:text="Not Implemented Yet! :("
+
+                                        android:textColor="@color/bgLogin"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/view3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="@android:color/darker_gray" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

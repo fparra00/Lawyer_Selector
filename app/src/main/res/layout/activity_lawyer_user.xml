@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/lyApp"
+    android:id="@+id/lyScroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgLogin"
@@ -10,7 +10,7 @@
     tools:context=".LawyerUser">
 
     <LinearLayout
-        android:id="@+id/lyTopMenuContainer"
+        android:id="@+id/lyTop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -217,7 +217,7 @@
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:id="@+id/lyOnKnowledge"
+                            android:id="@+id/lyCreditCard"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
@@ -239,7 +239,7 @@
                                 android:textStyle="bold" />
 
                             <LinearLayout
-                                android:id="@+id/lyKnowledge"
+                                android:id="@+id/lyViewCard"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"

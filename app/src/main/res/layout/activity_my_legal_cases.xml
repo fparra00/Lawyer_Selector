@@ -8,7 +8,7 @@
     tools:context=".navmenu_left_activities.MyLegalCasesActivity">
 
     <LinearLayout
-        android:id="@+id/lyApp"
+        android:id="@+id/lyScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/fontMain"
@@ -16,7 +16,7 @@
         tools:context=".PrincipalMenuActivity">
 
         <LinearLayout
-            android:id="@+id/lyTopMenuContainer"
+            android:id="@+id/lyTop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">

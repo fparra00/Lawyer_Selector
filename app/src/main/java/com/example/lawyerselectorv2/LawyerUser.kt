@@ -31,7 +31,7 @@ class LawyerUser : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lawyer_user)
         //Initialize Vars
-        lyKnowledgeAnim = lyKnowledge
+        lyKnowledgeAnim = lyViewCard
         topAppBar.menu.removeItem(R.id.iconFilterBot)
         NavView = navView
 
@@ -51,8 +51,8 @@ class LawyerUser : AppCompatActivity() {
         checkLeftMenu()
 
         //..onClicks..
-        lyOnKnowledge.setOnClickListener {
-            showLy(lyKnowledgeAnim, lyOnKnowledge, lawName4)
+        lyCreditCard.setOnClickListener {
+            showLy(lyKnowledgeAnim, lyCreditCard, lawName4)
         }
         lyOnBio.setOnClickListener {
             showLy(lyBio, lyOnBio, lawBio)

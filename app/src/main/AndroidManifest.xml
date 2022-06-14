@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lawyerselectorv2">
     <!-- PERMISSIONS -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -12,20 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
         <activity
-            android:name=".cdPayPal"
+            android:name=".ShowContactDatesLawyer"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".payments.PaymentCreditActivity"
+            android:exported="true" />
+        <activity
+            android:name=".customDialogs.cdPayPal"
             android:exported="false" />
         <activity
             android:name=".navmenu_left_activities.MyLegalCasesActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".navmenu_left_activities.MyProfileActivity"
-            android:exported="true"></activity> <!-- LOADING SCREEN -->
+            android:exported="true" /> <!-- LOADING SCREEN -->
         <activity
             android:name=".LoadingScreen"
             android:exported="true" /> <!-- CREATE LEGAL CASE -->
@@ -38,7 +41,6 @@
         <activity
             android:name=".LawyerUser"
             android:exported="true"> <!-- LAWYER DETAILS -->
-
         </activity>
         <activity
             android:name=".LawyerDetailsActivity"
@@ -49,7 +51,12 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- PRINCIPAL MENU LAWYERS -->
         <activity
             android:name=".PrincipalMenuActivity"
-            android:exported="true"></activity> <!-- SIGN UP 2 -->
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- SIGN UP 2 -->
         <activity
             android:name=".SignupActivity_2"
             android:exported="true"
@@ -64,20 +71,16 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- SPLASH SCREEN -->
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true"></activity> <!-- LOGIN ACTIVITY -->
+            android:exported="true" /> <!-- LOGIN ACTIVITY -->
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity> <!-- MAIN ACTIVITY -->
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- MAIN ACTIVITY -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-
-            <!-- META DATA -->
-
-        </activity>
-
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <!-- META DATA -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

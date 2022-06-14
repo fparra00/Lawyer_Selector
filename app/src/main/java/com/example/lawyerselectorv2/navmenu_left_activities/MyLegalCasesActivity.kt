@@ -55,7 +55,7 @@ class MyLegalCasesActivity : AppCompatActivity() {
     private fun getAllLegalCases() {
         refCase.get().addOnSuccessListener { result ->
             for (case in result) {
-                if (case.data.getValue("user").equals(emailPref)) {
+                if (case.data.getValue("user").equals("fparraoboe@gmail.com")) {
                     lc = LegalCase(
                         case.data.getValue("tittle") as String,
                         case.data.getValue("description") as String,
@@ -76,8 +76,6 @@ class MyLegalCasesActivity : AppCompatActivity() {
                 }
             }
         }
-
-
     }
 
     private fun checkTopMenu() {

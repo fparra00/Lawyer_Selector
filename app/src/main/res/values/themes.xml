@@ -31,6 +31,10 @@
         <item name="colorPrimary">@color/etYellow</item>
     </style>
 
+    <!-- Style of Dialog Translucid -->
+    <style name="Theme_Dialog_Translucent" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
 
 
     <!-- Style of Left Nav -->

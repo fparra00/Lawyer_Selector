@@ -1,6 +1,9 @@
 package com.example.lawyerselectorv2.adapters
 
+
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +11,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationSet
 import android.view.animation.LayoutAnimationController
 import android.view.animation.TranslateAnimation
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -15,6 +19,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.lawyerselectorv2.R
 import com.example.lawyerselectorv2.classes.LegalCase
+import com.example.lawyerselectorv2.payments.PaymentCreditActivity
+
 
 /**
  * LegalCasesAdapter:
@@ -22,6 +28,12 @@ import com.example.lawyerselectorv2.classes.LegalCase
  */
 class LegalCasesAdapter(private val context: Activity, private val arrCase: ArrayList<LegalCase>) :
     Adapter<LegalCasesAdapter.ViewHolder>() {
+
+    //Static Vars
+    companion object Stlawyer {
+         var lc: LegalCase? = null
+    }
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -55,7 +67,6 @@ class LegalCasesAdapter(private val context: Activity, private val arrCase: Arra
             holder.txtStatus.text = "CLOSE"
             holder.imgIcon.setImageResource((R.drawable.agreement_icon))
             holder.txtStatus.setTextColor(context.resources.getColor(R.color.etYellow))
-
         }
         //Dismissed Response
         if (arrCase[position].status.equals("3")) {
@@ -66,6 +77,10 @@ class LegalCasesAdapter(private val context: Activity, private val arrCase: Arra
         //..onClicks..
         holder.lyContainer.setOnClickListener {
             showLy(holder.lyInfo)
+        }
+
+        holder.lyContact.setOnClickListener {
+            goToMethodPage(position)
         }
     }
 
@@ -94,7 +109,7 @@ class LegalCasesAdapter(private val context: Activity, private val arrCase: Arra
             txtHour = itemView.findViewById(R.id.txtHourlc)
             txtDate = itemView.findViewById(R.id.txtDatelc)
             txtPeople = itemView.findViewById(R.id.txtPeoplelc)
-            lyContainer = itemView.findViewById(R.id.lyContainer)
+            lyContainer = itemView.findViewById(R.id.lyCard)
             lyInfo = itemView.findViewById(R.id.lyInfo)
             imgIcon = itemView.findViewById(R.id.imgHammer)
             lyContact = itemView.findViewById(R.id.lyCont2)
@@ -136,5 +151,28 @@ class LegalCasesAdapter(private val context: Activity, private val arrCase: Arra
         ly.layoutAnimation = controller
         ly.startAnimation(animation)
     }
+
+    private fun goToMethodPage(i:Int) {
+        lc = arrCase[i]
+        val layoutInflater = LayoutInflater.from(context)
+        val promptView: View = layoutInflater.inflate(R.layout.activity_cd_pay_pal, null)
+        val alertDialog: AlertDialog = AlertDialog.Builder(context).create()
+        alertDialog.setView(promptView);
+        val btnNegative: Button = promptView.findViewById<View>(R.id.btnGoToCases) as Button
+        btnNegative.setOnClickListener {
+            goToPay()
+        }
+        alertDialog.show()
+    }
+
+    private fun goToPay() {
+        val intent: Intent = Intent(context, PaymentCreditActivity::class.java)
+        context.startActivity(intent)
+        context.overridePendingTransition(
+            R.anim.right_toleft_into_windows,
+            R.anim.left_to_right_into_windows
+        );
+    }
+
 
 }

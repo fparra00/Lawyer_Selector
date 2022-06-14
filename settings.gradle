@@ -1,8 +1,13 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
+
+        gradlePluginPortal()
         mavenCentral()
+        flatDir{
+            dirs 'app/libs'
+        }
+
     }
 }
 dependencyResolutionManagement {
@@ -10,7 +15,12 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        flatDir{
+            dirs 'app/libs'
+        }
+
     }
 }
 rootProject.name = "LawyerSelector.v2"
 include ':app'
+include ':ej'

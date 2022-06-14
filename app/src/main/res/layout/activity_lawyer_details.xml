@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/lyApp"
+    android:id="@+id/lyScroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgLogin"
@@ -156,7 +156,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lyMid"
+            android:id="@+id/lyDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"

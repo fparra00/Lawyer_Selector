@@ -1,27 +1,38 @@
 package com.example.lawyerselectorv2
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationSet
 import android.view.animation.LayoutAnimationController
 import android.view.animation.TranslateAnimation
+import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.lawyerselectorv2.adapters.LegalCasesAdapter
 import com.example.lawyerselectorv2.adapters.RecyclerLawyersAdapter
 import com.example.lawyerselectorv2.classes.Lawyer
 import com.example.lawyerselectorv2.classes.LawyerCarreer
+import com.example.lawyerselectorv2.classes.LegalCase
 import com.example.lawyerselectorv2.navmenu_left_activities.MyLegalCasesActivity
 import com.example.lawyerselectorv2.navmenu_left_activities.MyProfileActivity
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_my_legal_cases.*
 import kotlinx.android.synthetic.main.activity_principal_menu.*
+import kotlinx.android.synthetic.main.activity_principal_menu.drawerLayout
+import kotlinx.android.synthetic.main.activity_principal_menu.lawyerRecycler
+import kotlinx.android.synthetic.main.activity_principal_menu.navView
+import kotlinx.android.synthetic.main.activity_principal_menu.topAppBar
 
 class PrincipalMenuActivity : AppCompatActivity() {
     //Aux Var
@@ -31,6 +42,8 @@ class PrincipalMenuActivity : AppCompatActivity() {
     private lateinit var lawyersRef: CollectionReference
     private lateinit var NavView: NavigationView
     private lateinit var lawyersRefCar: CollectionReference
+    private lateinit var refCase: CollectionReference
+
 
 
     companion object StaticVars {
@@ -44,13 +57,14 @@ class PrincipalMenuActivity : AppCompatActivity() {
         lawyersRef = Firebase.firestore.collection("Lawyer")
         NavView = navView
         topAppBar.menu.removeItem(R.id.iconHome)
+        refCase = Firebase.firestore.collection("LegalCases")
         //Functions that need to Recalculate
         getAllLawyers()
         //Aux Functions
         checkFilters()
         checkTopMenu()
         checkLeftMenu()
-
+        notifLegalCase()
         //..onClicks
         btnSignIn.setOnClickListener {
             goToLawyerProfile()
@@ -70,6 +84,35 @@ class PrincipalMenuActivity : AppCompatActivity() {
                     true
                 }
                 else -> false
+            }
+        }
+    }
+
+    private fun NotificationLawyer() {
+        Log.d("prueba", "jojojo")
+
+        val layoutInflater = LayoutInflater.from(this)
+        val promptView: View = layoutInflater.inflate(R.layout.cd_notification_legalcasel, null)
+        val alertDialog: AlertDialog = AlertDialog.Builder(this).create()
+        alertDialog.setView(promptView);
+        val btnNegative: Button = promptView.findViewById<View>(R.id.btnGoToCases) as Button
+        btnNegative.setOnClickListener {
+            goToMyLegalCases()
+        }
+        alertDialog.show()
+
+    }
+
+    private fun notifLegalCase() {
+
+        refCase.get().addOnSuccessListener { result ->
+            for (case in result) {
+                if (case.data.getValue("user").equals("fparraoboe@gmail.com")) {
+                    if (case.data.getValue("status").equals("1")){
+                        Log.d("prueba", "eeee")
+                        NotificationLawyer()
+                    }
+                }
             }
         }
     }
