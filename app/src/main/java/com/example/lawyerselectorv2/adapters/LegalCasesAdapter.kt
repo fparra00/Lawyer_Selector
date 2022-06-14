@@ -78,7 +78,6 @@ class LegalCasesAdapter(private val context: Activity, private val arrCase: Arra
         holder.lyContainer.setOnClickListener {
             showLy(holder.lyInfo)
         }
-
         holder.lyContact.setOnClickListener {
             goToMethodPage(position)
         }
@@ -100,7 +99,6 @@ class LegalCasesAdapter(private val context: Activity, private val arrCase: Arra
         var lyInfo: LinearLayout
         var lyContact: LinearLayout
         var imgIcon: ImageView
-
 
         init {
             txtName = itemView.findViewById(R.id.caseTittle)

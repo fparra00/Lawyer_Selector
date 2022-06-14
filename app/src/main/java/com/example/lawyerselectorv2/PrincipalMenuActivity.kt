@@ -1,7 +1,9 @@
 package com.example.lawyerselectorv2
 
 import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -43,8 +45,8 @@ class PrincipalMenuActivity : AppCompatActivity() {
     private lateinit var NavView: NavigationView
     private lateinit var lawyersRefCar: CollectionReference
     private lateinit var refCase: CollectionReference
-
-
+    lateinit var emailPref: String
+    lateinit var getPrefs: SharedPreferences
 
     companion object StaticVars {
         lateinit var allLawyer: ArrayList<Lawyer>
@@ -54,10 +56,13 @@ class PrincipalMenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal_menu)
         //Init Aux Vars
+        getPrefs = getSharedPreferences("prefsFile", Context.MODE_PRIVATE)
+        emailPref = getPrefs.getString("email", "null").toString()
         lawyersRef = Firebase.firestore.collection("Lawyer")
+        refCase = Firebase.firestore.collection("LegalCases")
         NavView = navView
         topAppBar.menu.removeItem(R.id.iconHome)
-        refCase = Firebase.firestore.collection("LegalCases")
+
         //Functions that need to Recalculate
         getAllLawyers()
         //Aux Functions
@@ -89,8 +94,6 @@ class PrincipalMenuActivity : AppCompatActivity() {
     }
 
     private fun NotificationLawyer() {
-        Log.d("prueba", "jojojo")
-
         val layoutInflater = LayoutInflater.from(this)
         val promptView: View = layoutInflater.inflate(R.layout.cd_notification_legalcasel, null)
         val alertDialog: AlertDialog = AlertDialog.Builder(this).create()
@@ -100,16 +103,13 @@ class PrincipalMenuActivity : AppCompatActivity() {
             goToMyLegalCases()
         }
         alertDialog.show()
-
     }
 
     private fun notifLegalCase() {
-
         refCase.get().addOnSuccessListener { result ->
             for (case in result) {
-                if (case.data.getValue("user").equals("fparraoboe@gmail.com")) {
+                if (case.data.getValue("user").equals(emailPref)) {
                     if (case.data.getValue("status").equals("1")){
-                        Log.d("prueba", "eeee")
                         NotificationLawyer()
                     }
                 }

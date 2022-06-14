@@ -97,16 +97,16 @@ class LawyerUser : AppCompatActivity() {
     private fun setDatesLawyer() {
         lwName.text = lawyerUser.name
         lwLocation.text = lawyerUser.country
-        lwBio.text = lawyerUser.careerDetails.description
-        lyStudie1.text = lawyerUser.careerDetails.studie1
-        lwStudie1.text = lawyerUser.careerDetails.studie1_description
-        lyStudie2.text = lawyerUser.careerDetails.studie2
-        lwStudie2.text = lawyerUser.careerDetails.studie2_description
-        lyStudie3.text = lawyerUser.careerDetails.studie3
-        lwStudie3.text = lawyerUser.careerDetails.studie3_description
-        lawEnglish.text = lawyerUser.careerDetails.level_english
-        lawSpanish.text = lawyerUser.careerDetails.level_spanish
-        lawFrench.text = lawyerUser.careerDetails.level_french
+        lwBio.text = lawyerUser.careerDetails!!.description
+        lyStudie1.text = lawyerUser.careerDetails!!.studie1
+        lwStudie1.text = lawyerUser.careerDetails!!.studie1_description
+        lyStudie2.text = lawyerUser.careerDetails!!.studie2
+        lwStudie2.text = lawyerUser.careerDetails!!.studie2_description
+        lyStudie3.text = lawyerUser.careerDetails!!.studie3
+        lwStudie3.text = lawyerUser.careerDetails!!.studie3_description
+        lawEnglish.text = lawyerUser.careerDetails!!.level_english
+        lawSpanish.text = lawyerUser.careerDetails!!.level_spanish
+        lawFrench.text = lawyerUser.careerDetails!!.level_french
     }
 
     private fun checkTopMenu() {

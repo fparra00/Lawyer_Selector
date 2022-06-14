@@ -39,7 +39,7 @@ class RecyclerLawyersAdapter(private val context: Activity, private val arrLaw: 
         holder.txtVal.text =
             "More of " + Random.nextInt(from = 0, until = 256).toString() + " valorations"
         //Set the photo of Profile
-        if (arrLaw[position].careerDetails.gender.equals("Male")){
+        if (arrLaw[position].careerDetails!!.gender.equals("Male")){
             holder.imgLawyer.setImageResource(R.drawable.hombre)
         } else {
             holder.imgLawyer.setImageResource(R.drawable.mujer)
