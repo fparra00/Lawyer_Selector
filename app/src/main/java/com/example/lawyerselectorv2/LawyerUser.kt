@@ -1,12 +1,15 @@
 package com.example.lawyerselectorv2
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationSet
 import android.view.animation.LayoutAnimationController
 import android.view.animation.TranslateAnimation
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -67,7 +70,7 @@ class LawyerUser : AppCompatActivity() {
 
 
     private fun contactDialog(ch: Boolean) {
-        if (!ch) showDialog() else showDialogWaitingResponse()
+        if (!ch) showDialog() else NotificationLawyer()
 
     }
 
@@ -83,13 +86,16 @@ class LawyerUser : AppCompatActivity() {
     }
 
 
-    private fun showDialogWaitingResponse() {
-        MaterialAlertDialogBuilder(this, R.style.CustomDialogTheme)
-            .setTitle("have a little patience")
-            .setMessage("We have just sent your legal case to the lawyer, when he accepts it, you will be able to see his contact information!")
-            .setPositiveButton("Okay!") { dialog, which ->
-                btnContactLawyer.text = "Awaiting Response"
-            }.show()
+    private fun NotificationLawyer() {
+        val layoutInflater = LayoutInflater.from(this)
+        val promptView: View = layoutInflater.inflate(R.layout.cd_notification_waitanswer, null)
+        val alertDialog: AlertDialog = AlertDialog.Builder(this).create()
+        alertDialog.setView(promptView);
+        val btnNegative: Button = promptView.findViewById<View>(R.id.btnGoToLawyers) as Button
+        btnNegative.setOnClickListener {
+            goToHome()
+        }
+        alertDialog.show()
     }
 
 

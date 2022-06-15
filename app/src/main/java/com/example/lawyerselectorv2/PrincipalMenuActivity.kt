@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.Animation
@@ -18,18 +17,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.lawyerselectorv2.adapters.LegalCasesAdapter
 import com.example.lawyerselectorv2.adapters.RecyclerLawyersAdapter
 import com.example.lawyerselectorv2.classes.Lawyer
 import com.example.lawyerselectorv2.classes.LawyerCarreer
-import com.example.lawyerselectorv2.classes.LegalCase
 import com.example.lawyerselectorv2.navmenu_left_activities.MyLegalCasesActivity
 import com.example.lawyerselectorv2.navmenu_left_activities.MyProfileActivity
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_my_legal_cases.*
 import kotlinx.android.synthetic.main.activity_principal_menu.*
 import kotlinx.android.synthetic.main.activity_principal_menu.drawerLayout
 import kotlinx.android.synthetic.main.activity_principal_menu.lawyerRecycler
@@ -98,7 +94,7 @@ class PrincipalMenuActivity : AppCompatActivity() {
         val promptView: View = layoutInflater.inflate(R.layout.cd_notification_legalcasel, null)
         val alertDialog: AlertDialog = AlertDialog.Builder(this).create()
         alertDialog.setView(promptView);
-        val btnNegative: Button = promptView.findViewById<View>(R.id.btnGoToCases) as Button
+        val btnNegative: Button = promptView.findViewById<View>(R.id.btnGoToLawyers) as Button
         btnNegative.setOnClickListener {
             goToMyLegalCases()
         }

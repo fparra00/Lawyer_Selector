@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lyCont"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".navmenu_left_activities.MyLawyersActivity">
+
+    <LinearLayout
+        android:id="@+id/lyApp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".navmenu_left_activities.MyLegalCasesActivity">
+
+        <LinearLayout
+            android:id="@+id/lyScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fontMain"
+            android:orientation="vertical"
+            tools:context=".PrincipalMenuActivity">
+
+            <LinearLayout
+                android:id="@+id/lyTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize">
+
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:id="@+id/topAppBar"
+                        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@color/bgWhite"
+                        android:minHeight="?attr/actionBarSize"
+                        android:outlineSpotShadowColor="@color/bgWhite"
+                        app:menu="@menu/top_bar_menu"
+                        app:navigationIcon="@drawable/hamburguer_menu_icon"
+                        app:rippleColor="@color/bgWhite">
+
+                        <ImageView
+                            android:id="@+id/imgHammer"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+
+                            android:layout_marginRight="20dp"
+                            android:adjustViewBounds="true"
+                            app:srcCompat="@drawable/logop" />
+                    </com.google.android.material.appbar.MaterialToolbar>
+
+                </com.google.android.material.appbar.AppBarLayout>
+            </LinearLayout>
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.drawerlayout.widget.DrawerLayout
+                    android:id="@+id/drawerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/lawyerRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.google.android.material.navigation.NavigationView
+                        android:id="@+id/navView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:background="@color/white"
+                        android:theme="@style/LeftNav"
+                        app:headerLayout="@layout/left_nav_header"
+                        app:itemTextAppearance="@style/LeftNavItem"
+                        app:itemTextColor="@color/bgLogin"
+                        app:menu="@menu/left_nav_menu"
+                        app:popupTheme="@style/LeftNav"></com.google.android.material.navigation.NavigationView>
+
+                </androidx.drawerlayout.widget.DrawerLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -5,11 +5,10 @@
     android:id="@+id/lyCard"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-
     android:background="@drawable/ly_rounded"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".customDialogs.cdPayPal">
+   >
 
     <LinearLayout
         android:id="@+id/ly11"
@@ -46,13 +45,13 @@
                     android:id="@+id/caseTittle6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/notif_icon"
+                    android:drawableStart="@drawable/contact_black_icon"
 
                     android:drawablePadding="5dp"
                     android:fontFamily="@font/abel"
                     android:gravity="center"
                     android:maxLines="2"
-                    android:text="A lawyer has accepted one of your legal cases"
+                    android:text=" Thank you very much for your purchase!"
                     android:textColor="@color/bgLogin"
                     android:textSize="18dp"
                     android:textStyle="bold" />
@@ -76,7 +75,7 @@
                 android:fontFamily="@font/abel"
                 android:gravity="center"
                 android:maxLines="2"
-                android:text="Click here to see your Legal Cases"
+                android:text=" You can see your lawyer's data on your page: 'my lawyers'"
                 android:textColor="@color/bgLogin"
                 android:textSize="15dp" />
         </LinearLayout>

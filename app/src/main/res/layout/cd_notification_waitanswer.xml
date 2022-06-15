@@ -46,13 +46,13 @@
                     android:id="@+id/caseTittle6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/notif_icon"
+                    android:drawableStart="@drawable/lawerprof_icon"
 
                     android:drawablePadding="5dp"
                     android:fontFamily="@font/abel"
                     android:gravity="center"
                     android:maxLines="2"
-                    android:text="A lawyer has accepted one of your legal cases"
+                    android:text=" The case has been sent to your lawyer"
                     android:textColor="@color/bgLogin"
                     android:textSize="18dp"
                     android:textStyle="bold" />
@@ -76,7 +76,7 @@
                 android:fontFamily="@font/abel"
                 android:gravity="center"
                 android:maxLines="2"
-                android:text="Click here to see your Legal Cases"
+                android:text=" Please be a little patient, and wait for him to answer"
                 android:textColor="@color/bgLogin"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -91,7 +91,7 @@
             android:layout_marginRight="80dp"
             android:background="@drawable/btn_signin_normal"
             android:fontFamily="@font/foundry_context"
-            android:text="Okey, go to!"
+            android:text="Go Home"
             android:textAllCaps="false"
             android:textColor="@color/bgWhite"
             android:textSize="15dp"

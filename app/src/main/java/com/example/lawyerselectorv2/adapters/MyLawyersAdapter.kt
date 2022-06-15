@@ -23,28 +23,23 @@ import com.example.lawyerselectorv2.payments.PaymentCreditActivity
 
 
 /**
- * LegalCasesAdapter:
+ * MyLawyersAdapter
  *
  */
-class LegalCasesAdapter(private val context: Activity, private val arrCase: ArrayList<LegalCase>) :
-    Adapter<LegalCasesAdapter.ViewHolder>() {
-
-    //Static Vars
-    companion object Stlawyer {
-         var lc: LegalCase? = null
-    }
+class MyLawyersAdapter(private val context: Activity, private val arrCase: ArrayList<LegalCase>) :
+    Adapter<MyLawyersAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): LegalCasesAdapter.ViewHolder {
+    ): MyLawyersAdapter.ViewHolder {
         val v =
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.legalcases_list_item, parent, false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: LegalCasesAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyLawyersAdapter.ViewHolder, position: Int) {
         //Setter Text
         holder.txtName.text = arrCase[position].tittle
         holder.txtDescr.text = arrCase[position].description
@@ -151,7 +146,6 @@ class LegalCasesAdapter(private val context: Activity, private val arrCase: Arra
     }
 
     private fun goToMethodPage(i:Int) {
-        lc = arrCase[i]
         val layoutInflater = LayoutInflater.from(context)
         val promptView: View = layoutInflater.inflate(R.layout.activity_cd_pay_pal, null)
         val alertDialog: AlertDialog = AlertDialog.Builder(context).create()

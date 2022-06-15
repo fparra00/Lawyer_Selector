@@ -119,7 +119,7 @@
                             </LinearLayout>
 
                             <LinearLayout
-                                android:id="@+id/lyValorations"
+                                android:id="@+id/lyIcons"
                                 android:layout_width="wrap_content"
                                 android:layout_height="32dp"
                                 android:orientation="vertical">

@@ -16,7 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2.6"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
 
         <LinearLayout
             android:id="@+id/lyPhoto"
@@ -29,9 +30,9 @@
             <ImageView
                 android:id="@+id/imgHammer"
                 android:layout_width="match_parent"
-                android:adjustViewBounds="true"
+                android:layout_height="55dp"
 
-                android:layout_height="66dp"
+                android:adjustViewBounds="true"
                 app:srcCompat="@drawable/hombre" />
         </LinearLayout>
 
@@ -55,24 +56,6 @@
                 android:textSize="14dp" />
 
             <TextView
-                android:id="@+id/caseDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="-5dp"
-                android:layout_marginTop="5dp"
-                android:background="@color/fontMain"
-                android:drawableStart="@drawable/location_icon"
-                android:drawablePadding="1dp"
-                android:ellipsize="end"
-                android:fontFamily="@font/foundry_context"
-                android:gravity="center_vertical"
-                android:maxLines="1"
-                android:text="Spain"
-                android:textColor="@color/fontGrey"
-                android:textSize="12dp"
-                tools:ignore="TextContrastCheck" />
-
-            <TextView
                 android:id="@+id/txtCase_lc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,6 +66,31 @@
                 android:text="Legal and family environment"
                 android:textColor="@color/fontGrey"
                 android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/txtCase_lc3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/foundry_context"
+                android:maxLines="5"
+                android:text="+34 633 908 735"
+                android:textColor="@color/bgWhite"
+                android:textSize="12dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/txtCase_lc2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/foundry_context"
+                android:maxLines="5"
+                android:text="fparraoboe@gmail.com"
+                android:textColor="@color/bgWhite"
+                android:textSize="12dp"
+                android:textStyle="italic" />
 
         </LinearLayout>
 
@@ -99,39 +107,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
+                android:gravity="center_horizontal|center_vertical"
                 android:weightSum="1">
 
-                <ImageView
-                    android:id="@+id/imgRating"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="-10dp"
-                    app:srcCompat="@drawable/rating" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lyTextVal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-20dp"
-                android:layout_weight="2.5"
-                android:gravity="center_horizontal"
-                android:orientation="vertical"
-                android:weightSum="1">
-
-                <TextView
-                    android:id="@+id/lawValorations"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/btnEmail"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/foundry_context"
-                    android:gravity="center"
-                    android:maxLines="1"
-                    android:text="More of 100 valorations"
-                    android:textColor="@color/fontGrey"
-                    android:textSize="10dp" />
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/telephone_icon_white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/mail_icon_white" />
+                </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 
@@ -141,7 +151,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="16dp"
         android:layout_weight="2.6"
         android:orientation="horizontal">

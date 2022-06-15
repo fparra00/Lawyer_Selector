@@ -4,6 +4,8 @@
     <!-- PERMISSIONS -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
 
     <application
         android:allowBackup="true"
@@ -13,19 +15,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
         <activity
-            android:name=".ShowContactDatesLawyer"
+            android:name=".navmenu_left_activities.MyLawyersActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".ShowContactDatesLawyer"
+            android:exported="true"></activity>
         <activity
             android:name=".payments.PaymentCreditActivity"
             android:exported="true" />
-        <activity
-            android:name=".customDialogs.cdPayPal"
-            android:exported="false" />
+
         <activity
             android:name=".navmenu_left_activities.MyLegalCasesActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".navmenu_left_activities.MyProfileActivity"
             android:exported="true" /> <!-- LOADING SCREEN -->
@@ -52,10 +59,7 @@
         <activity
             android:name=".PrincipalMenuActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity> <!-- SIGN UP 2 -->
         <activity
             android:name=".SignupActivity_2"
@@ -71,7 +75,8 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- SPLASH SCREEN -->
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true" /> <!-- LOGIN ACTIVITY -->
+            android:exported="true">
+        </activity><!-- LOGIN ACTIVITY -->
         <activity
             android:name=".LoginActivity"
             android:exported="true"
@@ -79,8 +84,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-        <!-- META DATA -->
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- META DATA -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
